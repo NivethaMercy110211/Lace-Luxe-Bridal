@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lace Luxe Bridal Veil Length Guide – find your perfect veil from blusher to cathedral with our interactive visual guide." />
+  <title>Veil Length Guide | Lace Luxe Bridal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/pages.css" />
+</head>
+<body class="veil-guide-page">
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-icon"><i class="bi bi-flower1"></i></span><span class="brand-text">Lace <em>Luxe</em> Bridal</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="toggler-icon"><span></span><span></span><span></span></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-1 align-items-lg-center">
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="patterns.html">Patterns</a></li>
+        <li class="nav-item"><a class="nav-link active-nav" href="veil-guide.html">Veil Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="embroidery.html">Embroidery</a></li>
+        <li class="nav-item"><a class="nav-link" href="try-at-home.html">Try at Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex gap-2 align-items-center ms-lg-3"><button class="nav-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme"><i class="bi bi-moon-stars"></i></button>
+        <button class="nav-toggle-btn" id="dirToggleBtn" title="Toggle Layout Direction (LTR/RTL)"><i class="bi bi-arrow-left-right"></i></button>
+        <a href="login.html" class="btn-nav-cta">Login</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- SECTION 1: PAGE HERO -->
+<section class="page-hero veil-guide-hero" id="page-hero">
+  <div class="page-hero-lace"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Find Your Perfect Fit</span>
+    <h1>Veil <em>Length</em> Guide</h1>
+    <p class="page-hero-subtitle">From the delicate blusher to the sweeping cathedral train — every length tells a different story. Let us help you find yours.</p>
+    <div class="page-hero-actions">
+      <a href="#interactive-guide" class="btn-primary-custom">Explore Lengths <i class="bi bi-rulers"></i></a>
+      <a href="contact.html" class="btn-outline-custom">Book Fitting <i class="bi bi-calendar-heart"></i></a>
+    </div>
+  </div>
+  <div class="page-hero-badge d-none d-lg-flex"><i class="bi bi-rulers"></i><div class="badge-text">5 Lengths<br/>Available</div></div>
+</section>
+
+<!-- SECTION 2: INTERACTIVE LENGTH SELECTOR -->
+<section class="section-pad bg-section" id="interactive-guide">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Interactive Guide</span>
+      <h2 class="section-title">Choose Your <em>Length</em></h2>
+    </div>
+    <div class="veil-interactive-wrap" data-aos="fade-up" data-aos-delay="100">
+      <div class="veil-selector d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <button class="veil-tab active" data-veil="blusher">Blusher</button>
+        <button class="veil-tab" data-veil="elbow">Elbow</button>
+        <button class="veil-tab" data-veil="fingertip">Fingertip</button>
+        <button class="veil-tab" data-veil="chapel">Chapel</button>
+        <button class="veil-tab" data-veil="cathedral">Cathedral</button>
+      </div>
+      <div class="row g-4 align-items-stretch interactive-guide-grid">
+        <div class="interactive-guide-card"><div class="veil-visual-card"><div class="veil-silhouette-wrap"><img src="images/veil_blusher.png" alt="Veil Visual" id="veilImg" class="veil-silhouette-img" /></div></div></div>
+        <div class="interactive-guide-card">
+          <div class="veil-info-card" id="veilInfoCard">
+            <div class="veil-name-row d-flex align-items-center gap-3 mb-3"><div class="veil-icon-circle"><i class="bi bi-rulers"></i></div><div><h4 class="veil-title" id="veilTitle">Blusher Veil</h4><span class="veil-length-badge" id="veilLengthBadge">30 – 40 cm</span></div></div>
+            <p class="veil-description" id="veilDescription">The blusher veil is a short, face-covering layer. Traditionally worn over the face during the ceremony and lifted by the partner at the altar.</p>
+            <ul class="veil-features-list" id="veilFeaturesList">
+              <li><i class="bi bi-check-circle-fill"></i> Perfect for intimate ceremonies</li>
+              <li><i class="bi bi-check-circle-fill"></i> Adds romantic drama</li>
+              <li><i class="bi bi-check-circle-fill"></i> Works with all dress lengths</li>
+              <li><i class="bi bi-check-circle-fill"></i> Ideal for first look moments</li>
+            </ul>
+            <div class="veil-pair-row mt-4"><span class="pair-label">Pairs Best With:</span><div class="dress-tags d-flex flex-wrap gap-2 mt-2"><span class="dress-tag">A-Line</span><span class="dress-tag">Ball Gown</span><span class="dress-tag">Mermaid</span></div></div>
+          </div>
+        </div>
+        <div class="interactive-guide-card">
+          <div class="veil-comparison-card">
+            <h6 class="comp-title">Quick Comparison</h6>
+            <div class="comparison-rows">
+              <div class="comp-row active" data-veil="blusher"><span class="comp-name">Blusher</span><div class="comp-bar-wrap"><div class="comp-bar" style="width:15%"></div></div><span class="comp-len">~35cm</span></div>
+              <div class="comp-row" data-veil="elbow"><span class="comp-name">Elbow</span><div class="comp-bar-wrap"><div class="comp-bar" style="width:35%"></div></div><span class="comp-len">~75cm</span></div>
+              <div class="comp-row" data-veil="fingertip"><span class="comp-name">Fingertip</span><div class="comp-bar-wrap"><div class="comp-bar" style="width:55%"></div></div><span class="comp-len">~100cm</span></div>
+              <div class="comp-row" data-veil="chapel"><span class="comp-name">Chapel</span><div class="comp-bar-wrap"><div class="comp-bar" style="width:75%"></div></div><span class="comp-len">~200cm</span></div>
+              <div class="comp-row" data-veil="cathedral"><span class="comp-name">Cathedral</span><div class="comp-bar-wrap"><div class="comp-bar" style="width:100%"></div></div><span class="comp-len">~300cm</span></div>
+            </div>
+            <a href="contact.html" class="btn-primary-custom mt-4 d-block text-center">Get Custom Length</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: VEIL BY WEDDING STYLE -->
+<section class="section-pad bg-cream" id="style-pairing">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Style Pairing</span>
+      <h2 class="section-title">Veil by <em>Wedding</em> Style</h2>
+      <p class="section-subtitle">The right veil elevates your chosen wedding aesthetic into something truly unforgettable.</p>
+    </div>
+    <div class="row g-4 veil-card-grid four-card-grid">
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="info-card" style="border-top:3px solid var(--clr-rose);">
+          <div class="info-card-icon"><i class="bi bi-tree"></i></div>
+          <h5>Garden / Outdoor</h5>
+          <p>Elbow or fingertip lengths flutter beautifully in light breeze. Soft tulle and lightweight lace edges work best.</p>
+          <div class="mt-auto pt-3"><span class="dress-tag">Elbow</span> <span class="dress-tag">Fingertip</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-card" style="border-top:3px solid var(--clr-gold);">
+          <div class="info-card-icon"><i class="bi bi-building"></i></div>
+          <h5>Church / Cathedral</h5>
+          <p>A full chapel or cathedral veil creates a regal processional. The longer the aisle, the longer the veil.</p>
+          <div class="mt-auto pt-3"><span class="dress-tag">Chapel</span> <span class="dress-tag">Cathedral</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-card" style="border-top:3px solid var(--clr-rose);">
+          <div class="info-card-icon"><i class="bi bi-water"></i></div>
+          <h5>Beach / Destination</h5>
+          <p>Blusher or birdcage styles suit beach weddings. Minimal fabric reduces wind resistance for comfortable wear.</p>
+          <div class="mt-auto pt-3"><span class="dress-tag">Blusher</span> <span class="dress-tag">Elbow</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="info-card" style="border-top:3px solid var(--clr-gold);">
+          <div class="info-card-icon"><i class="bi bi-stars"></i></div>
+          <h5>Ballroom / Gala</h5>
+          <p>Cathedral sweeps complement the grandeur of a formal ballroom. Pair with a full ball gown for maximum impact.</p>
+          <div class="mt-auto pt-3"><span class="dress-tag">Cathedral</span> <span class="dress-tag">Chapel</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: FABRIC OPTIONS -->
+<section class="section-pad bg-section" id="fabric-options">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Fabric Selection</span>
+      <h2 class="section-title">Choose Your <em>Fabric</em></h2>
+    </div>
+    <div class="row g-4 veil-card-grid four-card-grid">
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="0"><div class="icon-grid-card"><div class="icon-circle-lg"><i class="bi bi-droplet-half"></i></div><h6>Silk Tulle</h6><p>Featherweight luxury with a natural sheen. The most popular choice for all lengths.</p></div></div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100"><div class="icon-grid-card"><div class="icon-circle-lg"><i class="bi bi-wind"></i></div><h6>Soft Nylon</h6><p>Structured body with great shape retention. Ideal for cathedral veils with drama.</p></div></div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200"><div class="icon-grid-card"><div class="icon-circle-lg"><i class="bi bi-eye"></i></div><h6>Illusion Net</h6><p>Near-invisible fine mesh — the top choice for blusher and face-frame styles.</p></div></div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300"><div class="icon-grid-card"><div class="icon-circle-lg"><i class="bi bi-gem"></i></div><h6>Organza</h6><p>Stiff, formal body for structured shapes. Creates a powerful red-carpet presence.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: EDGE OPTIONS -->
+<section class="section-pad bg-cream" id="edge-options">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Finishing Touches</span>
+      <h2 class="section-title">Edge & <em>Layer</em> Options</h2>
+      <p class="section-subtitle">The edge finish defines the character of your veil — from barely-there raw cuts to lavish lace borders.</p>
+    </div>
+    <div class="row g-4 align-items-stretch veil-card-grid three-card-grid">
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="pattern-card"><div class="pattern-img-wrap" style="height:200px;"><img src="images/veil_guide_cta_bg.png" alt="Raw Cut Edge" /></div><div class="pattern-card-body"><h5 class="pattern-name">Raw Cut</h5><p class="pattern-type" style="margin-bottom:8px;">Minimalist · Modern</p><p style="font-size:0.85rem;color:var(--clr-mocha);margin:0;">Clean, unhemmed edge with a soft floating finish for a barely-there, effortless bridal look.</p></div></div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="pattern-card"><div class="pattern-img-wrap" style="height:200px;"><img src="images/lace_border_edge.jpg" alt="Lace Border Edge" /></div><div class="pattern-card-body"><h5 class="pattern-name">Lace Border</h5><p class="pattern-type" style="margin-bottom:8px;">Romantic · Classic</p><p style="font-size:0.85rem;color:var(--clr-mocha);margin:0;">A band of matching or contrasting lace frames the veil's edge exquisitely.</p></div></div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="pattern-card"><div class="pattern-img-wrap" style="height:200px;"><img src="images/veil_guide_hero.png" alt="Pearl Edge" /></div><div class="pattern-card-body"><h5 class="pattern-name">Pearl Edge</h5><p class="pattern-type" style="margin-bottom:8px;">Luxe · Couture</p><p style="font-size:0.85rem;color:var(--clr-mocha);margin:0;">Handset freshwater pearls along the hem — each one individually placed.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: CARE GUIDE -->
+<section class="section-pad bg-section" id="care-guide-section">
+  <div class="container">
+    <div class="row align-items-center g-5 care-guide-row">
+      <div class="col-12 col-lg-6 care-content-col" data-aos="fade-right">
+        <span class="section-tag">After the Aisle</span>
+        <h2 class="section-title">Veil <em>Care</em> Guide</h2>
+        <p class="section-body-text mb-4">Your veil is a lifelong heirloom. With the right care, it will remain as breathtaking as the day you wore it.</p>
+        <div class="v-timeline">
+          <div class="v-timeline-item"><div class="v-timeline-dot"></div><h5>Cleaning</h5><p>Spot-clean with cold water and gentle lingerie wash. Never machine wash tulle or lace. Professional dry cleaning recommended for embellished styles.</p></div>
+          <div class="v-timeline-item"><div class="v-timeline-dot"></div><h5>Storage</h5><p>Loosely roll around acid-free tissue paper and store in a breathable muslin bag. Avoid plastic which traps moisture and can yellow fabric.</p></div>
+          <div class="v-timeline-item"><div class="v-timeline-dot"></div><h5>Pressing</h5><p>Use a cool iron with a pressing cloth, or steam from a distance. Never apply direct heat — lace can melt under high temperature.</p></div>
+          <div class="v-timeline-item"><div class="v-timeline-dot"></div><h5>Heirloom Preservation</h5><p>We offer professional preservation services. Contact us to box and preserve your veil for future generations.</p></div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 care-image-col" data-aos="fade-left">
+        <div class="care-guide-grid">
+          <div class="care-guide-tile" style="border-radius:var(--radius-md);overflow:hidden;"><img src="images/veyil_care_guide1.jpg" alt="Care 1" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div class="care-guide-tile" style="border-radius:var(--radius-md);overflow:hidden;"><img src="images/veyil_care_guide2.jpg" alt="Care 2" style="width:100%;height:100%;object-fit:cover;" /></div>
+          <div class="care-guide-tile care-guide-tile-wide" style="border-radius:var(--radius-md);overflow:hidden;grid-column:span 2;"><img src="images/veyil_care_guide3.jpg" alt="Care 3" style="width:100%;height:100%;object-fit:cover;" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: CONSULTATION CTA -->
+<section class="section-pad bg-cream" id="veil-consultation">
+  <div class="container" data-aos="zoom-in">
+    <div class="cta-banner veil-guide-cta-banner">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <h2>Still Not Sure Which <em>Length</em> Is Right?</h2>
+          <p>Book a free virtual or in-studio consultation with our veil specialists. We'll review your gown, venue, and vision together.</p>
+          <div class="d-flex flex-wrap gap-3" style="position:relative;z-index:1;">
+            <a href="contact.html" class="btn-white">Book Free Consultation <i class="bi bi-calendar-heart"></i></a>
+            <a href="try-at-home.html" class="btn-outline-white">Try at Home Program <i class="bi bi-box-seam"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 d-none d-lg-block" style="position:relative;z-index:1;text-align:right;">
+          <div style="font-family:var(--font-display);font-size:4rem;font-weight:300;font-style:italic;color:rgba(255,255,255,0.3);line-height:1;">Every<br/>inch<br/>matters.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="row g-4 footer-top"><div class="col-12 col-md-6 col-lg-4"><a class="footer-brand d-flex align-items-center gap-2 mb-3" href="index.html" aria-label="Lace Luxe Bridal home"><span class="brand-icon"><i class="bi bi-flower1"></i></span><span class="brand-text">Lace <em>Luxe</em> Bridal</span></a><p class="footer-about">Artisan lace and bridal veil design studio dedicated to making every bride feel extraordinary.</p><div class="footer-socials d-flex gap-3 mt-3"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-pinterest"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-tiktok"></i></a></div></div><div class="col-6 col-lg-2 offset-lg-1"><h6 class="footer-heading">Pages</h6><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="patterns.html">Patterns</a></li><li><a href="veil-guide.html">Veil Guide</a></li><li><a href="embroidery.html">Embroidery</a></li><li><a href="try-at-home.html">Try at Home</a></li></ul></div><div class="col-6 col-lg-2"><h6 class="footer-heading">Company</h6><ul class="footer-links"><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Login</a></li><li><a href="register.html">Register</a></li></ul></div><div class="col-12 col-lg-3"><h6 class="footer-heading">Visit Us</h6><div class="footer-address"><p><i class="bi bi-geo-alt-fill"></i> 142 Bridal Lane, Suite 200<br/>San Francisco, CA 94102</p><p><i class="bi bi-telephone-fill"></i> +1 (800) 522-2397</p><p><i class="bi bi-envelope-fill"></i> hello@laceluxe.com</p></div></div></div><div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3"><p class="footer-copy">© 2025 Lace Luxe Bridal. All rights reserved.</p><div class="footer-legal d-flex gap-3"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Shipping</a></div></div></div></footer>
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body></html>

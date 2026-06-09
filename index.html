@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lace Luxe Bridal – Custom Lace & Bridal Veil Design Studio. Explore lace patterns, veil guides, embroidery, and real wedding gallery." />
+  <title>Lace Luxe Bridal | Home</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+</head>
+<body class="home-page">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <span class="brand-icon"><i class="bi bi-flower1"></i></span>
+      <span class="brand-text">Lace <em>Luxe</em> Bridal</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="toggler-icon"><span></span><span></span><span></span></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-1 align-items-lg-center">
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active-nav" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="patterns.html">Patterns</a></li>
+        <li class="nav-item"><a class="nav-link" href="veil-guide.html">Veil Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="embroidery.html">Embroidery</a></li>
+        <li class="nav-item"><a class="nav-link" href="try-at-home.html">Try at Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex gap-2 align-items-center ms-lg-3">
+        <button class="nav-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme"><i class="bi bi-moon-stars"></i></button>
+        <button class="nav-toggle-btn" id="dirToggleBtn" title="Toggle Layout Direction (LTR/RTL)"><i class="bi bi-arrow-left-right"></i></button>
+        <a href="login.html" class="btn-nav-cta">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- SECTION 1: HERO -->
+<section class="hero-section" id="hero">
+  <div class="hero-lace-overlay" id="heroLace"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="container hero-container">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-7 hero-content" data-aos="fade-right" data-aos-duration="1200">
+        <span class="hero-tag">Est. 2018 · Artisan Crafted</span>
+        <h1 class="hero-title">
+          Where <em>Lace</em> Meets<br/>
+          <span class="gradient-text">Your Dream</span>
+        </h1>
+        <p class="hero-subtitle">Bespoke bridal veils and lace creations handcrafted for your perfect day. Every thread tells your love story.</p>
+        <div class="hero-actions d-flex flex-wrap gap-3">
+          <a href="patterns.html" class="btn-primary-custom">Explore Patterns <i class="bi bi-arrow-right-short"></i></a>
+          <a href="try-at-home.html" class="btn-outline-custom">Try at Home <i class="bi bi-house-heart"></i></a>
+        </div>
+        <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
+          <div class="stat-item"><span class="stat-num" data-target="1200">0</span><span class="stat-num">+</span><span class="stat-label">Brides Served</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num" data-target="80">0</span><span class="stat-num">+</span><span class="stat-label">Lace Patterns</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-num">+</span><span class="stat-label">Years Crafting</span></div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+        <div class="hero-image-frame">
+          <img src="images/hero_index.png" alt="Bridal Veil" class="hero-img" />
+          <div class="frame-badge"><i class="bi bi-patch-check-fill"></i> Handcrafted Artisan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator"><span>Scroll to Discover</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- SECTION 2: MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>Alencon Lace &nbsp;✦&nbsp;</span><span>Chantilly Lace &nbsp;✦&nbsp;</span><span>Venetian Lace &nbsp;✦&nbsp;</span>
+    <span>Guipure Lace &nbsp;✦&nbsp;</span><span>Duchess Satin &nbsp;✦&nbsp;</span><span>Cathedral Veils &nbsp;✦&nbsp;</span>
+    <span>Custom Embroidery &nbsp;✦&nbsp;</span><span>Try at Home &nbsp;✦&nbsp;</span>
+    <span>Alencon Lace &nbsp;✦&nbsp;</span><span>Chantilly Lace &nbsp;✦&nbsp;</span><span>Venetian Lace &nbsp;✦&nbsp;</span>
+    <span>Guipure Lace &nbsp;✦&nbsp;</span><span>Duchess Satin &nbsp;✦&nbsp;</span><span>Cathedral Veils &nbsp;✦&nbsp;</span>
+    <span>Custom Embroidery &nbsp;✦&nbsp;</span><span>Try at Home &nbsp;✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- SECTION 3: SERVICES OVERVIEW -->
+<section class="section-pad bg-cream" id="services">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">A Studio Built for <em>Every</em> Bride</h2>
+      <p class="section-subtitle">From curated lace patterns to fully custom veils — your perfect piece is waiting.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <a href="patterns.html" class="icon-grid-card text-decoration-none">
+          <div class="icon-circle-lg"><i class="bi bi-grid-3x3-gap"></i></div>
+          <h6>Pattern Library</h6>
+          <p>80+ handpicked lace designs across 5 style categories.</p>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <a href="veil-guide.html" class="icon-grid-card text-decoration-none">
+          <div class="icon-circle-lg"><i class="bi bi-rulers"></i></div>
+          <h6>Veil Length Guide</h6>
+          <p>Find your perfect length from blusher to cathedral.</p>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <a href="embroidery.html" class="icon-grid-card text-decoration-none">
+          <div class="icon-circle-lg"><i class="bi bi-flower2"></i></div>
+          <h6>Custom Embroidery</h6>
+          <p>Monograms, florals, crystals — your heirloom awaits.</p>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <a href="try-at-home.html" class="icon-grid-card text-decoration-none">
+          <div class="icon-circle-lg"><i class="bi bi-house-heart"></i></div>
+          <h6>Try at Home</h6>
+          <p>Try 4 styles for 5 days. Free 2-way shipping. No risk.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: FEATURED PATTERNS -->
+<section class="section-pad bg-section" id="featured-patterns">
+  <div class="container">
+    <div class="row align-items-end mb-5">
+      <div class="col-12 col-md-8" data-aos="fade-right">
+        <span class="section-tag">Trending Now</span>
+        <h2 class="section-title">Featured <em>Lace</em> Patterns</h2>
+        <p class="section-subtitle" style="margin:0">Our most-loved designs this season, curated by our stylists.</p>
+      </div>
+      <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0" data-aos="fade-left">
+        <a href="patterns.html" class="btn-secondary-custom">View All Patterns <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="pattern-card">
+          <div class="pattern-img-wrap">
+            <img src="images/patterns_cta_bg.png" alt="Alencon Rose" />
+            <div class="pattern-overlay"><button class="btn-view-pattern" onclick="window.location='patterns.html'">View Details <i class="bi bi-arrow-right"></i></button></div>
+            <span class="pattern-badge">Bestseller</span>
+          </div>
+          <div class="pattern-card-body">
+            <h5 class="pattern-name">Alencon Rose</h5>
+            <p class="pattern-type">Classic French Lace</p>
+            <div class="pattern-meta d-flex justify-content-between align-items-center">
+              <span class="pattern-price">From $180/yd</span>
+              <div class="pattern-dots"><span class="dot" style="background:#f5e6d3"></span><span class="dot" style="background:#e8d5c0"></span><span class="dot" style="background:#d4b896"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="pattern-card">
+          <div class="pattern-img-wrap">
+            <img src="images/lace_library_hero.png" alt="Chantilly Dream" />
+            <div class="pattern-overlay"><button class="btn-view-pattern" onclick="window.location='patterns.html'">View Details <i class="bi bi-arrow-right"></i></button></div>
+            <span class="pattern-badge new">New</span>
+          </div>
+          <div class="pattern-card-body">
+            <h5 class="pattern-name">Chantilly Dream</h5>
+            <p class="pattern-type">Modern Sheer Lace</p>
+            <div class="pattern-meta d-flex justify-content-between align-items-center">
+              <span class="pattern-price">From $145/yd</span>
+              <div class="pattern-dots"><span class="dot" style="background:#fff"></span><span class="dot" style="background:#f9f0e6"></span><span class="dot" style="background:#ecdcc8"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="pattern-card">
+          <div class="pattern-img-wrap">
+            <img src="images/embroidery_cta_bg.png" alt="Venetian Bloom" />
+            <div class="pattern-overlay"><button class="btn-view-pattern" onclick="window.location='patterns.html'">View Details <i class="bi bi-arrow-right"></i></button></div>
+          </div>
+          <div class="pattern-card-body">
+            <h5 class="pattern-name">Venetian Bloom</h5>
+            <p class="pattern-type">Floral Couture Lace</p>
+            <div class="pattern-meta d-flex justify-content-between align-items-center">
+              <span class="pattern-price">From $220/yd</span>
+              <div class="pattern-dots"><span class="dot" style="background:#fdf6ee"></span><span class="dot" style="background:#e8cba8"></span><span class="dot" style="background:#c9976e"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: WHY CHOOSE US -->
+<section class="section-pad bg-cream" id="why-us">
+  <div class="container">
+    <div class="row align-items-stretch g-5">
+      <div class="col-12 col-lg-5 d-flex" data-aos="fade-right">
+        <div class="why-us-image" style="position:relative; border-radius:var(--radius-lg); overflow:hidden; height:480px;">
+          <img src="images/why_choose_bg.png" alt="Why Choose Us" style="width:100%;height:100%;object-fit:cover;" />
+          <div class="luxe-card-bg" style="position:absolute;bottom:24px;left:24px;border-radius:var(--radius-md);padding:18px 22px;box-shadow:var(--shadow-md);">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <i class="bi bi-award-fill" style="font-size:1.8rem;color:var(--clr-gold);"></i>
+              <div>
+                <div style="font-family:var(--font-display);font-size:1rem;font-weight:500;color:var(--clr-charcoal);">Award-Winning</div>
+                <div style="font-size:0.78rem;color:var(--clr-mocha);">Best Bridal Studio 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7 why-us-content" data-aos="fade-left">
+        <span class="section-tag">Our Difference</span>
+        <h2 class="section-title">Crafted With <em>Intention</em></h2>
+        <p class="section-body-text mb-4">We don't just make veils — we create heirlooms. Every piece that leaves our studio has been touched by artisans who have dedicated their lives to the craft of lace-making.</p>
+        <div class="row g-3 mt-2 why-us-value-grid">
+          <div class="col-12 col-sm-6">
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="value-icon"><i class="bi bi-hand-index-thumb"></i></div>
+              <h5>100% Handcrafted</h5>
+              <p>Every stitch made by certified artisans with decades of experience.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="100">
+              <div class="value-icon"><i class="bi bi-recycle"></i></div>
+              <h5>Sustainably Sourced</h5>
+              <p>Ethical fabrics from European mills with zero-waste production.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="200">
+              <div class="value-icon"><i class="bi bi-shield-check"></i></div>
+              <h5>Happiness Guarantee</h5>
+              <p>Love your veil or we'll remake it — no questions asked.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="value-card" data-aos="zoom-in" data-aos-delay="300">
+              <div class="value-icon"><i class="bi bi-clock-history"></i></div>
+              <h5>8-Week Delivery</h5>
+              <p>Rush options available. Your timeline is our priority.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: TESTIMONIALS -->
+<section class="section-pad bg-section" id="testimonials">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Love Stories</span>
+      <h2 class="section-title">Brides Are <em>Saying</em></h2>
+    </div>
+    <div class="row g-4 love-stories-grid">
+      <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">The try-at-home program was a dream. I tried 4 veils and knew instantly which was meant for me.</p>
+          <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+            <img src="images/avatar_sophia.jpg" alt="Sophia R." class="author-avatar" />
+            <div><h6 class="author-name">Sophia R.</h6><span class="author-date">Married June 2024</span></div>
+            <div class="ms-auto stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card featured-testimonial">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">My custom monogram veil was beyond anything I imagined. Every detail felt personal and beautifully hand-stitched.</p>
+          <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+            <img src="images/avatar_amara.jpg" alt="Amara K." class="author-avatar" />
+            <div><h6 class="author-name">Amara K.</h6><span class="author-date">Married March 2025</span></div>
+            <div class="ms-auto stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">The cathedral veil was worth every penny. Everyone said it was the most beautiful veil they'd ever seen.</p>
+          <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+            <img src="images/avatar_isabelle.jpg" alt="Isabelle M." class="author-avatar" />
+            <div><h6 class="author-name">Isabelle M.</h6><span class="author-date">Married Oct 2024</span></div>
+            <div class="ms-auto stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card featured-testimonial">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">From the first sketch to delivery, the team made every choice feel personal, calm, and beautifully considered.</p>
+          <div class="testimonial-author d-flex align-items-center gap-3 mt-4">
+            <img src="images/team_mei.jpg" alt="Claire V." class="author-avatar" />
+            <div><h6 class="author-name">Claire V.</h6><span class="author-date">Married May 2025</span></div>
+            <div class="ms-auto stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: NEWSLETTER CTA -->
+<section class="section-pad newsletter-section index-newsletter-section" id="newsletter">
+  <div class="container">
+    <div class="cta-banner index-cta-banner" data-aos="zoom-in">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-6">
+          <h2>Join the Lace <em>Luxe</em> Family</h2>
+          <p>Get exclusive pattern previews, bridal tips, and early access to try-at-home slots.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" id="homeEmail" />
+            <button type="button" onclick="handleNewsletterHome()">Subscribe <i class="bi bi-send-fill"></i></button>
+          </div>
+          <p style="font-size:0.75rem;opacity:0.65;margin-top:10px;position:relative;z-index:1;">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+        <div class="col-12 col-lg-6 d-none d-lg-flex justify-content-end align-items-center gap-4" style="position:relative;z-index:1;">
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:3rem;font-weight:600;color:rgba(255,255,255,0.9);">12K+</div>
+            <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Newsletter Readers</div>
+          </div>
+          <div style="width:1px;height:60px;background:rgba(255,255,255,0.2);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:var(--font-display);font-size:3rem;font-weight:600;color:rgba(255,255,255,0.9);">98%</div>
+            <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);">Would Recommend</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 footer-top">
+      <div class="col-12 col-md-6 col-lg-4">
+        <a class="footer-brand d-flex align-items-center gap-2 mb-3" href="index.html" aria-label="Lace Luxe Bridal home">
+          <span class="brand-icon"><i class="bi bi-flower1"></i></span>
+          <span class="brand-text">Lace <em>Luxe</em> Bridal</span>
+        </a>
+        <p class="footer-about">Artisan lace and bridal veil design studio dedicated to making every bride feel extraordinary.</p>
+        <div class="footer-socials d-flex gap-3 mt-3">
+          <a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-pinterest"></i></a>
+          <a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2 offset-lg-1">
+        <h6 class="footer-heading">Pages</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="patterns.html">Patterns</a></li>
+          <li><a href="veil-guide.html">Veil Guide</a></li>
+          <li><a href="embroidery.html">Embroidery</a></li>
+          <li><a href="try-at-home.html">Try at Home</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h6 class="footer-heading">Company</h6>
+        <ul class="footer-links">
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-3">
+        <h6 class="footer-heading">Visit Us</h6>
+        <div class="footer-address">
+          <p><i class="bi bi-geo-alt-fill"></i> 142 Bridal Lane, Suite 200<br/>San Francisco, CA 94102</p>
+          <p><i class="bi bi-telephone-fill"></i> +1 (800) 522-2397</p>
+          <p><i class="bi bi-envelope-fill"></i> hello@laceluxe.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="footer-copy">© 2025 Lace Luxe Bridal. All rights reserved.</p>
+      <div class="footer-legal d-flex gap-3">
+        <a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Shipping</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+function handleNewsletterHome() {
+  const input = document.getElementById('homeEmail');
+  if (!input.value || !input.value.includes('@')) { input.style.borderColor='#e57373'; return; }
+  input.value = ''; input.placeholder = '✓ You\'re subscribed!'; input.style.borderColor = 'var(--clr-gold)';
+}
+</script>
+</body>
+</html>

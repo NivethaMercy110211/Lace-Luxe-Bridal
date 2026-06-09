@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#faf6f0"/>
+  <!-- Drafting grid -->
+  <g stroke="#e5dfd5" stroke-width="0.5">
+    <circle cx="150" cy="110" r="75"/>
+    <circle cx="150" cy="110" r="50"/>
+    <line x1="0" y1="110" x2="300" y2="110"/>
+    <line x1="150" y1="0" x2="150" y2="220"/>
+  </g>
+  <!-- Hand-drawn Calligraphy and Border Details -->
+  <g fill="none" stroke="#685c53" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <!-- Calligraphy Monogram Letter 'L' (Left/Center) -->
+    <path d="M110 85 C120 70, 132 75, 125 95 C120 110, 105 125, 135 125 C142 125, 148 120, 142 115 C135 110, 125 118, 132 128 C140 135, 155 125, 160 120" stroke-width="1.5"/>
+    <!-- Calligraphy Letter 'B' (Right/Center, overlapping slightly) -->
+    <path d="M148 78 L148 135" stroke-width="1.6"/>
+    <path d="M148 78 C160 78, 175 88, 165 102 C158 108, 152 108, 148 108" stroke-width="1.4"/>
+    <path d="M148 108 C165 108, 178 118, 168 132 C158 140, 148 135, 148 135" stroke-width="1.5"/>
+    <!-- Swashes and flourishes -->
+    <path d="M140 74 C150 64, 165 64, 160 74"/>
+    <path d="M135 138 C142 144, 152 144, 158 138"/>
+    
+    <!-- Pearl Border Marks (Represented as small draft circles along the outer guidelines) -->
+    <circle cx="150" cy="35" r="1.5" fill="#685c53"/>
+    <circle cx="150" cy="185" r="1.5" fill="#685c53"/>
+    <circle cx="75" cy="110" r="1.5" fill="#685c53"/>
+    <circle cx="225" cy="110" r="1.5" fill="#685c53"/>
+    
+    <circle cx="97" cy="57" r="1.5" fill="#685c53"/>
+    <circle cx="203" cy="57" r="1.5" fill="#685c53"/>
+    <circle cx="97" cy="163" r="1.5" fill="#685c53"/>
+    <circle cx="203" cy="163" r="1.5" fill="#685c53"/>
+    
+    <!-- Hand-drawn note lines -->
+    <line x1="210" y1="140" x2="250" y2="155" stroke-width="0.8"/>
+  </g>
+  <!-- Notes and labels -->
+  <text x="15" y="25" font-family="'Jost', sans-serif" font-size="9" fill="#8c7e73" letter-spacing="1">MONOGRAM SKETCH #88</text>
+  <text x="15" y="38" font-family="'Jost', sans-serif" font-size="8" fill="#a89a8e">BESPOKE EMBROIDERY: "L &amp; B"</text>
+  <text x="235" y="170" font-family="'Cormorant Garamond', serif" font-size="9" font-style="italic" fill="#8c7e73">3mm pearl spacing</text>
+</svg>

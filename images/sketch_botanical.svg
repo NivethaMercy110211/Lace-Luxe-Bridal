@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#faf6f0"/>
+  <!-- Drafting grid lines -->
+  <g stroke="#e5dfd5" stroke-width="0.5">
+    <line x1="0" y1="55" x2="300" y2="55"/>
+    <line x1="0" y1="110" x2="300" y2="110"/>
+    <line x1="0" y1="165" x2="300" y2="165"/>
+    <line x1="75" y1="0" x2="75" y2="220"/>
+    <line x1="150" y1="0" x2="150" y2="220"/>
+    <line x1="225" y1="0" x2="225" y2="220"/>
+  </g>
+  <!-- Hand-drawn Botanical branch -->
+  <g fill="none" stroke="#685c53" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8">
+    <!-- Main stem curving diagonally -->
+    <path d="M50 170 C90 140, 180 120, 250 80" stroke-width="1.8"/>
+    
+    <!-- Leaf pair 1 (Bottom Left) -->
+    <path d="M90 140 C80 125, 78 110, 88 105 C98 100, 102 120, 90 140 Z"/>
+    <line x1="90" y1="140" x2="88" y2="115"/>
+    <path d="M95 138 C108 145, 120 138, 122 128 C124 118, 110 125, 95 138 Z"/>
+    <line x1="95" y1="138" x2="112" y2="130"/>
+    
+    <!-- Leaf pair 2 (Middle Center) -->
+    <path d="M145 120 C135 105, 130 90, 140 85 C150 80, 155 100, 145 120 Z"/>
+    <line x1="145" y1="120" x2="140" y2="95"/>
+    <path d="M150 118 C165 122, 178 115, 178 105 C178 95, 162 105, 150 118 Z"/>
+    <line x1="150" y1="118" x2="165" y2="110"/>
+    
+    <!-- Leaf pair 3 (Top Right) -->
+    <path d="M200 100 C190 85, 188 70, 198 65 C208 60, 212 80, 200 100 Z"/>
+    <line x1="200" y1="100" x2="198" y2="75"/>
+    <path d="M205 98 C218 105, 230 98, 232 88 C234 78, 220 85, 205 98 Z"/>
+    <line x1="205" y1="98" x2="222" y2="90"/>
+    
+    <!-- Vine tendril details -->
+    <path d="M115 132 C115 145, 125 150, 130 145"/>
+    <path d="M172 110 C172 122, 185 128, 190 120"/>
+  </g>
+  <!-- Notes and labels -->
+  <text x="15" y="25" font-family="'Jost', sans-serif" font-size="9" fill="#8c7e73" letter-spacing="1">BOTANICAL SKETCH #52</text>
+  <text x="15" y="38" font-family="'Jost', sans-serif" font-size="8" fill="#a89a8e">ORGANIC LEAF VINE AND STEM PATTERN</text>
+  <text x="195" y="195" font-family="'Cormorant Garamond', serif" font-size="9" font-style="italic" fill="#8c7e73">Gold thread outline sketch</text>
+</svg>

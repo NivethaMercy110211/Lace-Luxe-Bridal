@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery of real weddings featuring Lace Luxe Bridal veils – garden, church, beach, and ballroom ceremonies." />
+  <title>Gallery | Lace Luxe Bridal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/pages.css" />
+</head>
+<body class="gallery-page">
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html"><span class="brand-icon"><i class="bi bi-flower1"></i></span><span class="brand-text">Lace <em>Luxe</em> Bridal</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="toggler-icon"><span></span><span></span><span></span></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-1 align-items-lg-center">
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Home
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="homeDropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="patterns.html">Patterns</a></li>
+        <li class="nav-item"><a class="nav-link" href="veil-guide.html">Veil Guide</a></li>
+        <li class="nav-item"><a class="nav-link" href="embroidery.html">Embroidery</a></li>
+        <li class="nav-item"><a class="nav-link" href="try-at-home.html">Try at Home</a></li>
+        <li class="nav-item"><a class="nav-link active-nav" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex gap-2 align-items-center ms-lg-3"><button class="nav-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme"><i class="bi bi-moon-stars"></i></button>
+        <button class="nav-toggle-btn" id="dirToggleBtn" title="Toggle Layout Direction (LTR/RTL)"><i class="bi bi-arrow-left-right"></i></button>
+        <a href="login.html" class="btn-nav-cta">Login</a></div>
+    </div>
+  </div>
+</nav>
+
+<!-- SECTION 1: PAGE HERO -->
+<section class="page-hero gallery-hero" id="page-hero">
+  <div class="page-hero-lace"></div>
+  <div class="container page-hero-content">
+    <span class="section-tag">Real Weddings</span>
+    <h1>Gallery of <em>Real</em> Weddings</h1>
+    <p class="page-hero-subtitle">Witness the magic through the eyes of real brides who wore Lace Luxe. Every image tells a unique love story.</p>
+    <div class="page-hero-actions">
+      <a href="#gallery-grid" class="btn-primary-custom">Browse Gallery <i class="bi bi-images"></i></a>
+      <a href="#submit-story" class="btn-outline-custom">Share Yours <i class="bi bi-camera"></i></a>
+    </div>
+  </div>
+  <div class="page-hero-badge d-none d-lg-flex"><i class="bi bi-camera2"></i><div class="badge-text">1,200+<br/>Real Weddings</div></div>
+</section>
+
+<!-- SECTION 2: FILTER + GALLERY GRID -->
+<section class="section-pad bg-section" id="gallery-grid">
+  <div class="container">
+    <div class="gallery-filters d-flex flex-wrap justify-content-center gap-2 mb-4" data-aos="fade-up">
+      <button class="filter-btn active" data-gfilter="all">All Weddings</button>
+      <button class="filter-btn" data-gfilter="garden">Garden</button>
+      <button class="filter-btn" data-gfilter="church">Church</button>
+      <button class="filter-btn" data-gfilter="beach">Beach</button>
+      <button class="filter-btn" data-gfilter="ballroom">Ballroom</button>
+    </div>
+    <div class="row g-3 gallery-filter-grid" id="galleryGrid">
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="garden" data-aos="fade-up" data-aos-delay="0"><div class="gallery-card"><img src="images/gallery_garden_wedding.jpg" alt="Garden Wedding" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> Tuscany Gardens, CA</span><h6 class="gallery-couple">Sophia & James</h6><span class="gallery-veil-used">Venetian Bloom · Cathedral</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="church" data-aos="fade-up" data-aos-delay="100"><div class="gallery-card tall-gallery"><img src="images/gallery_church_wedding.jpg" alt="Church Wedding" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> St. Mary's Cathedral, NY</span><h6 class="gallery-couple">Amara & David</h6><span class="gallery-veil-used">Alencon Rose · Chapel</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="beach" data-aos="fade-up" data-aos-delay="200"><div class="gallery-card"><img src="images/gallery_beach_wedding.jpg" alt="Beach Wedding" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> Malibu Beach, CA</span><h6 class="gallery-couple">Claire & Marc</h6><span class="gallery-veil-used">Chantilly Dream · Fingertip</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="ballroom" data-aos="fade-up" data-aos-delay="0"><div class="gallery-card"><img src="images/gallery_ballroom_wedding.jpg" alt="Ballroom Wedding" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> The Plaza, NYC</span><h6 class="gallery-couple">Elena & Peter</h6><span class="gallery-veil-used">Guipure Pearl · Cathedral</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="garden" data-aos="fade-up" data-aos-delay="100"><div class="gallery-card tall-gallery"><img src="images/gallery_garden_wedding2.jpg" alt="Garden Wedding 2" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> Biltmore Gardens, NC</span><h6 class="gallery-couple">Lily & Tom</h6><span class="gallery-veil-used">Garden Reverie · Elbow</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4 gallery-item" data-gcat="church" data-aos="fade-up" data-aos-delay="200"><div class="gallery-card"><img src="images/gallery_featured_wedding1.jpg" alt="Church Wedding 2" /><div class="gallery-hover"><div class="gallery-hover-content"><span class="gallery-venue"><i class="bi bi-geo-alt"></i> Notre Dame Chapel, MO</span><h6 class="gallery-couple">Grace & Oliver</h6><span class="gallery-veil-used">Venetian Bloom · Cathedral</span><button class="btn-gallery-expand"><i class="bi bi-zoom-in"></i></button></div></div></div></div>
+    </div>
+    <div class="lightbox-overlay" id="lightboxOverlay"><button class="lightbox-close" id="lightboxClose"><i class="bi bi-x-lg"></i></button><button class="lightbox-prev" id="lightboxPrev"><i class="bi bi-chevron-left"></i></button><button class="lightbox-next" id="lightboxNext"><i class="bi bi-chevron-right"></i></button><div class="lightbox-content"><img src="" alt="" id="lightboxImg" /></div></div>
+  </div>
+</section>
+
+<!-- SECTION 3: FEATURED WEDDING SPOTLIGHT -->
+<section class="section-pad bg-cream">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Wedding of the Season</span>
+      <h2 class="section-title">Featured <em>Spotlight</em></h2>
+    </div>
+    <div class="row align-items-center g-5">
+      <div class="col-12 col-lg-6" data-aos="fade-right">
+        <div class="spotlight-img-main"><img src="images/gallery_featured_wedding.jpg" alt="Featured Wedding" /></div>
+      </div>
+      <div class="col-12 col-lg-6" data-aos="fade-left">
+        <div class="spotlight-details">
+          <span class="spotlight-tag">June 2025 · Tuscany Gardens, Florence</span>
+          <h3 class="spotlight-title">Sophia & James — A Garden Romance</h3>
+          <div class="spotlight-meta">
+            <span><i class="bi bi-geo-alt"></i> Villa Corsini, Florence</span>
+            <span><i class="bi bi-people"></i> 180 guests</span>
+            <span><i class="bi bi-flower1"></i> Garden Ceremony</span>
+          </div>
+          <p class="spotlight-text">Sophia chose our Venetian Bloom cathedral veil with hand-embroidered florals trailing 3 meters behind her. Her gown — a silk organza A-line — was the perfect canvas for our most dramatic veil. The ceremony photographer captured 37 frames of just the veil alone.</p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <div style="background:var(--clr-section-bg);border-radius:var(--radius-sm);padding:14px 20px;">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--clr-rose);margin-bottom:2px;">Veil Used</div>
+              <div style="font-family:var(--font-display);font-size:0.95rem;color:var(--clr-charcoal);">Venetian Bloom · Cathedral</div>
+            </div>
+            <div style="background:var(--clr-section-bg);border-radius:var(--radius-sm);padding:14px 20px;">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--clr-rose);margin-bottom:2px;">Embroidery</div>
+              <div style="font-family:var(--font-display);font-size:0.95rem;color:var(--clr-charcoal);">Floral + Swarovski Crystal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: VIDEO STORIES -->
+<section class="section-pad bg-section" id="moving-moments">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Moving Moments</span>
+      <h2 class="section-title">Video <em>Stories</em></h2>
+      <p class="section-subtitle">Real brides sharing their Lace Luxe experience — from the try-at-home box to the altar.</p>
+    </div>
+    <div class="row g-4 moving-moments-grid">
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="0"><div class="video-card"><img src="images/gallery_video_sophia.jpg" alt="Video 1" /><div class="video-play-btn"><i class="bi bi-play-fill"></i></div><div class="video-card-label"><h6>Sophia's Cathedral Walk</h6><span>3:42 · Garden Ceremony · 2024</span></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100"><div class="video-card"><img src="images/gallery_video_amara.jpg" alt="Video 2" /><div class="video-play-btn"><i class="bi bi-play-fill"></i></div><div class="video-card-label"><h6>Amara's Church Processional</h6><span>2:58 · Cathedral Ceremony · 2025</span></div></div></div>
+      <div class="col-12 col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200"><div class="video-card"><img src="images/gallery_video_lily.jpg" alt="Video 3" /><div class="video-play-btn"><i class="bi bi-play-fill"></i></div><div class="video-card-label"><h6>Lily's Outdoor Reveal</h6><span>4:15 · Garden Ceremony · 2025</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SUBMIT YOUR STORY -->
+<section class="section-pad bg-cream" id="submit-story">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-12 col-lg-6" data-aos="fade-right">
+        <span class="section-tag">Share Your Day</span>
+        <h2 class="section-title">Submit Your <em>Wedding</em></h2>
+        <p class="section-body-text mb-4">Were you a Lace Luxe bride? We'd love to feature your story. Each month, one submission is chosen for our website spotlight and featured in our newsletter.</p>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+          <h6>Drop your wedding photos here</h6>
+          <p>JPEG, PNG, or HEIC · Up to 20 photos · Max 50MB each</p>
+          <label style="margin-top:16px;display:inline-block;" class="btn-primary-custom" for="photoUpload">Choose Files <i class="bi bi-folder2-open"></i></label>
+          <input type="file" id="photoUpload" accept="image/*" multiple style="display:none;" />
+        </div>
+      </div>
+      <div class="col-12 col-lg-6" data-aos="fade-left">
+        <div class="contact-form-card">
+          <h5 class="form-card-title">Your Wedding Details</h5>
+          <form>
+            <div class="row g-3">
+              <div class="col-12 col-sm-6"><div class="form-group"><label>Bride's Name</label><input type="text" class="form-control-custom" placeholder="Your name" /></div></div>
+              <div class="col-12 col-sm-6"><div class="form-group"><label>Partner's Name</label><input type="text" class="form-control-custom" placeholder="Partner's name" /></div></div>
+              <div class="col-12 col-sm-6"><div class="form-group"><label>Wedding Date</label><input type="date" class="form-control-custom" /></div></div>
+              <div class="col-12 col-sm-6"><div class="form-group"><label>Venue / Location</label><input type="text" class="form-control-custom" placeholder="e.g. Tuscany Gardens, CA" /></div></div>
+              <div class="col-12"><div class="form-group"><label>Veil You Wore</label><select class="form-control-custom"><option>Select a veil style</option><option>Venetian Bloom</option><option>Alencon Rose</option><option>Chantilly Dream</option><option>Guipure Pearl</option><option>Other / Custom</option></select></div></div>
+              <div class="col-12"><div class="form-group"><label>Your Love Story</label><textarea class="form-control-custom" rows="3" placeholder="Tell us about your special day..."></textarea></div></div>
+              <div class="col-12"><button type="button" class="btn-primary-custom w-100">Submit My Wedding <i class="bi bi-send-fill"></i></button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: INSTAGRAM INSPIRATION -->
+<section class="section-pad bg-section">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">@laceluxebridal</span>
+      <h2 class="section-title">Instagram <em>Inspiration</em></h2>
+      <p class="section-subtitle">Follow us for daily bridal inspiration, behind-the-scenes crafting, and new arrival previews.</p>
+    </div>
+    <div class="insta-grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="insta-item"><img src="images/instagram_1.jpg" alt="Instagram 1" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+      <div class="insta-item"><img src="images/instagram_2.jpg" alt="Instagram 2" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+      <div class="insta-item"><img src="images/instagram_3.jpg" alt="Instagram 3" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+      <div class="insta-item"><img src="images/instagram_4.jpg" alt="Instagram 4" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+      <div class="insta-item"><img src="images/instagram_5.jpg" alt="Instagram 5" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+      <div class="insta-item"><img src="images/instagram_6.jpg" alt="Instagram 6" /><div class="insta-overlay"><i class="bi bi-instagram"></i></div></div>
+    </div>
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="#" class="btn-secondary-custom"><i class="bi bi-instagram me-2"></i>Follow @laceluxebridal</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: CTA -->
+<section class="section-pad bg-cream">
+  <div class="container" data-aos="zoom-in">
+    <div class="cta-banner gallery-cta-banner">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <h2>Want to Be in Our <em>Gallery?</em></h2>
+          <p>Start with our try-at-home program and discover the veil that belongs in your wedding story.</p>
+          <div class="d-flex flex-wrap gap-3" style="position:relative;z-index:1;">
+            <a href="try-at-home.html" class="btn-white">Start Your Trial <i class="bi bi-box-seam"></i></a>
+            <a href="contact.html" class="btn-outline-white">Book Consultation <i class="bi bi-calendar-heart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><div class="row g-4 footer-top"><div class="col-12 col-md-6 col-lg-4"><a class="footer-brand d-flex align-items-center gap-2 mb-3" href="index.html" aria-label="Lace Luxe Bridal home"><span class="brand-icon"><i class="bi bi-flower1"></i></span><span class="brand-text">Lace <em>Luxe</em> Bridal</span></a><p class="footer-about">Artisan lace and bridal veil design studio.</p><div class="footer-socials d-flex gap-3 mt-3"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-pinterest"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-tiktok"></i></a></div></div><div class="col-6 col-lg-2 offset-lg-1"><h6 class="footer-heading">Pages</h6><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="patterns.html">Patterns</a></li><li><a href="veil-guide.html">Veil Guide</a></li><li><a href="embroidery.html">Embroidery</a></li><li><a href="try-at-home.html">Try at Home</a></li></ul></div><div class="col-6 col-lg-2"><h6 class="footer-heading">Company</h6><ul class="footer-links"><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Login</a></li><li><a href="register.html">Register</a></li></ul></div><div class="col-12 col-lg-3"><h6 class="footer-heading">Visit Us</h6><div class="footer-address"><p><i class="bi bi-geo-alt-fill"></i> 142 Bridal Lane, Suite 200<br/>San Francisco, CA 94102</p><p><i class="bi bi-telephone-fill"></i> +1 (800) 522-2397</p><p><i class="bi bi-envelope-fill"></i> hello@laceluxe.com</p></div></div></div><div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3"><p class="footer-copy">© 2025 Lace Luxe Bridal. All rights reserved.</p><div class="footer-legal d-flex gap-3"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Shipping</a></div></div></div></footer>
+<button class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</body></html>
