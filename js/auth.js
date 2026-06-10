@@ -134,7 +134,7 @@ function goToStep(step) {
 
   // Show target step
   const target = document.getElementById(`regStep${step}`);
-  if (target) { target.style.display = 'block'; target.style.animation = 'fadeInItem 0.4s ease both'; }
+  if (target) { target.style.display = 'grid'; target.style.animation = 'fadeInItem 0.4s ease both'; }
 
   // Update progress dots
   document.querySelectorAll('.reg-step').forEach((dot, i) => {

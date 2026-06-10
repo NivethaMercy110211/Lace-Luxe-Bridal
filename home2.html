@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lace Luxe Bridal – Alternative Premium Homepage. Explore our lookbook, premium lace library, try-at-home kit, and book atelier consultations." />
   <title>Lace Luxe Bridal | Home 2 (Atelier Edition)</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2" />
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+  <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -18,7 +21,7 @@
       display: flex;
       align-items: stretch;
       background: var(--clr-cream);
-      padding-top: 80px;
+      padding-top: 20px;
     }
     .hero-text-side {
       flex: 1;
@@ -26,6 +29,18 @@
       flex-direction: column;
       justify-content: center;
       padding: 40px 48px;
+    }
+    .hero-text-wrap {
+      max-width: 520px;
+      width: 100%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+    @media (max-width: 991.98px) {
+      .hero-text-wrap {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
     .hero-img-side {
       width: 48%;
@@ -88,6 +103,58 @@
     /* Home 2 responsive polish */
     #hero2 .hero-subtitle {
       max-width: 560px;
+    }
+    
+    /* Hero Stats Standardization */
+    .hero-stats {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 24px 32px !important;
+      justify-content: flex-start !important;
+      align-items: stretch !important;
+      padding-top: 28px !important;
+      border-top: 1px solid rgba(200, 169, 110, 0.25) !important;
+    }
+    .stat-item {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+      text-align: left !important;
+      min-height: 62px !important;
+      min-width: 100px !important;
+    }
+    .stat-label {
+      white-space: normal !important;
+      display: block !important;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-stats {
+        justify-content: center !important;
+        max-width: 500px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      .stat-item {
+        align-items: center !important;
+        text-align: center !important;
+        flex: 1 1 120px !important;
+      }
+      .stat-divider {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-stats {
+        max-width: 328px !important;
+        gap: 16px 20px !important;
+      }
+      .stat-item {
+        flex: 1 1 90px !important;
+        min-height: 58px !important;
+      }
     }
     #lookbook .row,
     #lace-treasures .row,
@@ -345,21 +412,21 @@
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav mx-auto gap-lg-1 align-items-lg-center">
-                <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle active-nav" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Home
+            Home <i class="bi bi-chevron-down dropdown-icon" style="font-size: 0.72rem; margin-left: 4px;"></i>
           </a>
           <ul class="dropdown-menu" aria-labelledby="homeDropdown">
             <li><a class="dropdown-item" href="index.html">Home 1</a></li>
             <li><a class="dropdown-item" href="home2.html">Home 2</a></li>
           </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="patterns.html">Patterns</a></li>
         <li class="nav-item"><a class="nav-link" href="veil-guide.html">Veil Guide</a></li>
         <li class="nav-item"><a class="nav-link" href="embroidery.html">Embroidery</a></li>
         <li class="nav-item"><a class="nav-link" href="try-at-home.html">Try at Home</a></li>
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
       <div class="d-flex gap-2 align-items-center ms-lg-3">
@@ -374,22 +441,24 @@
 <!-- SECTION 1: HERO SECTION (Couture Split) -->
 <section class="hero-split-section" id="hero2">
   <div class="hero-text-side" data-aos="fade-right" data-aos-duration="1200">
-    <span class="hero-tag">Couture Edition · Est. 2018</span>
-    <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.2rem);">
-      The <em>Couture</em><br/>
-      <span class="gradient-text">Veil Collection</span>
-    </h1>
-    <p class="hero-subtitle">Designed with passion, crafted by hand. Step into our world of modern bridal artistry and find your perfect heirloom.</p>
-    <div class="hero-actions d-flex flex-wrap gap-3">
-      <a href="#lookbook" class="btn-primary-custom">Explore Lookbook <i class="bi bi-arrow-right-short"></i></a>
-      <a href="contact.html" class="btn-outline-custom">Book Atelier Fitting <i class="bi bi-calendar-heart"></i></a>
-    </div>
-    <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
-      <div class="stat-item"><span class="stat-num">120+</span><span class="stat-label">Hours Per Veil</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Handcrafted Lace</span></div>
-      <div class="stat-divider"></div>
-      <div class="stat-item"><span class="stat-num">12K+</span><span class="stat-label">Happy Brides</span></div>
+    <div class="hero-text-wrap">
+      <span class="hero-tag">Couture Edition · Est. 2018</span>
+      <h1 class="hero-title" style="font-size: clamp(2.5rem, 5vw, 4.2rem);">
+        The <em>Couture</em><br/>
+        <span class="gradient-text">Veil Collection</span>
+      </h1>
+      <p class="hero-subtitle">Designed with passion, crafted by hand. Step into our world of modern bridal artistry and find your perfect heirloom.</p>
+      <div class="hero-actions d-flex flex-wrap gap-3">
+        <a href="#lookbook" class="btn-primary-custom">Explore Lookbook <i class="bi bi-arrow-right-short"></i></a>
+        <a href="contact.html" class="btn-outline-custom">Book Atelier Fitting <i class="bi bi-calendar-heart"></i></a>
+      </div>
+      <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
+        <div class="stat-item"><span class="stat-num">120+</span><span class="stat-label">Hours Per Veil</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Handcrafted Lace</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">12K+</span><span class="stat-label">Happy Brides</span></div>
+      </div>
     </div>
   </div>
   <div class="hero-img-side" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200"></div>
@@ -692,7 +761,7 @@
       </div>
     </div>
     <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center gap-3">
-      <p class="footer-copy">© 2025 Lace Luxe Bridal. All rights reserved.</p>
+      <p class="footer-copy">© 2026 Lace Luxe Bridal. All rights reserved.</p>
       <div class="footer-legal d-flex gap-3">
         <a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Shipping</a>
       </div>
