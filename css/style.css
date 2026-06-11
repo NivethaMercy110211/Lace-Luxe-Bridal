@@ -33,14 +33,17 @@
 /* ---- Reset & Base ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+/* Use overflow-x:clip instead of hidden so position:sticky/fixed is not broken */
+html { scroll-behavior: smooth; overflow-x: clip; }
 
 body {
   font-family: var(--font-body);
   background: var(--clr-cream);
   color: var(--clr-charcoal);
-  overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.7;
+  /* Offset for fixed navbar. Updated by JS on resize if needed. */
+  padding-top: var(--nav-height, 66px);
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -48,14 +51,23 @@ img { max-width: 100%; height: auto; display: block; }
 /* ==========================================
    NAVBAR
    ========================================== */
+:root {
+  --nav-height: 66px; /* base nav height; JS updates this via --nav-height */
+}
+
 #mainNav {
-  background: rgba(253, 248, 242, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(253, 248, 242, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(200, 169, 110, 0.18);
   padding: 14px 0;
   z-index: 1050;
-  transition: var(--transition);
+  transition: padding var(--transition), box-shadow var(--transition);
 }
 
 #mainNav .container {
@@ -1294,6 +1306,12 @@ body.dark-theme .hero-image-frame:hover .hero-img {
   border-color: var(--clr-rose);
   box-shadow: 0 0 0 3px rgba(201, 130, 110, 0.12);
 }
+.search-box-wrap .form-control-custom {
+  background: var(--clr-warm-white);
+}
+body.dark-theme .search-box-wrap .form-control-custom {
+  background: var(--clr-card-bg);
+}
 textarea.form-control-custom { resize: vertical; min-height: 100px; }
 
 .form-success {
@@ -1391,9 +1409,9 @@ textarea.form-control-custom { resize: vertical; min-height: 100px; }
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
   box-shadow: 0 6px 20px rgba(201, 130, 110, 0.4);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(12px);
+  opacity: 1 !important;
+  pointer-events: all !important;
+  transform: translateY(0) !important;
   transition: var(--transition);
   z-index: 999;
 }
@@ -1513,6 +1531,7 @@ body.dark-theme .team-card,
 body.dark-theme .social-platform-card,
 body.dark-theme .swatch-card,
 body.dark-theme .contact-form-card,
+body.dark-theme .auth-form-card,
 body.dark-theme .veil-info-card,
 body.dark-theme .veil-comparison-card,
 body.dark-theme .value-card,
@@ -1742,17 +1761,16 @@ html[dir="rtl"] .page-hero-badge {
 
   .navbar-collapse {
     position: fixed;
-    top: 0;
+    top: var(--nav-height, 66px);
     bottom: 0;
     left: auto;
     right: 0;
     width: min(330px, 86vw);
-    height: 100vh !important;
-    height: 100dvh !important;
-    min-height: 100vh;
+    height: calc(100vh - var(--nav-height, 66px));
+    height: calc(100dvh - var(--nav-height, 66px));
     z-index: 1100;
     background: var(--clr-cream);
-    padding: 88px 24px 28px;
+    padding: 28px 24px 28px;
     border-radius: 0;
     margin-top: 0;
     box-shadow: -18px 0 45px rgba(44, 36, 32, 0.16);
@@ -1760,7 +1778,7 @@ html[dir="rtl"] .page-hero-badge {
     outline: 0;
     max-height: none;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: clip;
     scrollbar-width: none;
     transform: translateX(100%);
     transform-origin: top right;
@@ -1796,8 +1814,8 @@ html[dir="rtl"] .page-hero-badge {
     pointer-events: auto;
   }
   .navbar-collapse.collapsing {
-    height: 100vh !important;
-    height: 100dvh !important;
+    height: calc(100vh - var(--nav-height, 66px)) !important;
+    height: calc(100dvh - var(--nav-height, 66px)) !important;
     overflow: hidden;
     transition: transform 0.28s ease, opacity 0.2s ease, visibility 0.2s ease !important;
   }
@@ -1925,8 +1943,8 @@ html[dir="rtl"] .page-hero-badge {
   }
 
   .navbar-collapse {
-    top: 0;
+    top: var(--nav-height, 66px);
     width: min(360px, 82vw);
-    padding-top: 92px;
+    padding-top: 28px;
   }
 }

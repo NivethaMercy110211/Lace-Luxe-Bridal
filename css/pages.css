@@ -323,10 +323,10 @@
 .v-timeline-item h5 {
   font-family: var(--font-display);
   font-size: 1.15rem; font-weight: 500;
-  color: var(--clr-charcoal);
+  color:#3e2609;
   margin-bottom: 8px;
 }
-.v-timeline-item p { font-size: 0.9rem; color: var(--clr-mocha); line-height: 1.75; margin: 0; }
+.v-timeline-item p { font-size: 0.9rem; color: #74461f; line-height: 1.75; margin: 0; }
 
 /* ─── ACCORDION (FAQ) ─── */
 .faq-accordion .faq-item {
@@ -570,7 +570,7 @@
 .auth-simple-page {
   min-height: 100vh;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   background:
     radial-gradient(circle at top left, rgba(200, 169, 110, 0.16), transparent 34%),
     linear-gradient(145deg, var(--clr-cream) 0%, var(--clr-section-bg) 100%);
@@ -945,10 +945,14 @@
 .press-logo {
   font-family: var(--font-display); font-size: 1.3rem;
   font-weight: 300; font-style: italic; letter-spacing: 0.04em;
-  color: rgba(44,36,32,0.35);
-  transition: color var(--transition);
+  color: var(--clr-mocha);
+  opacity: 0.55;
+  transition: color var(--transition), opacity var(--transition);
 }
-.press-logo:hover { color: var(--clr-rose); }
+.press-logo:hover {
+  color: var(--clr-rose);
+  opacity: 1;
+}
 
 /* ─── STAT COUNTER STRIP ─── */
 .stat-strip { background: linear-gradient(135deg, var(--clr-mocha), var(--clr-charcoal)); padding: 52px 0; }
@@ -957,7 +961,7 @@
   font-family: var(--font-display); font-size: 2.8rem; font-weight: 600;
   color: var(--clr-gold); line-height: 1; display: block;
 }
-.strip-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); display: block; margin-top: 6px; }
+.strip-label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); display: block; margin-top: 6px; line-height: 1.4; }
 
 /* ─── VIDEO CARD ─── */
 .video-card {
@@ -1312,11 +1316,11 @@
 
 /* Veil Guide: Interactive Guide */
 html:has(body.veil-guide-page) {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.veil-guide-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -2605,11 +2609,11 @@ body.veil-guide-page .veil-card-grid :is(h5, h6, p, .pattern-type) {
 
 /* About page responsive pass */
 html:has(body.about-page) {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.about-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -3085,11 +3089,11 @@ body.about-page :is(.value-card, .info-card, .team-card, .press-logo, .strip-lab
 
 /* Contact page responsive pass */
 html:has(body.contact-page) {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.contact-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -3293,7 +3297,16 @@ body.contact-page :is(.btn-primary-custom, .btn-outline-custom) {
   #contact-form .contact-perks {
     max-width: 620px;
     margin: 0 auto;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  #contact-form .contact-perk-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   #contact-form .contact-socials {
@@ -3372,10 +3385,16 @@ body.contact-page :is(.btn-primary-custom, .btn-outline-custom) {
   }
 
   #contact-form .contact-perks {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
 
   #contact-form .contact-perk-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 12px;
   }
 
@@ -3467,9 +3486,13 @@ body.contact-page :is(.btn-primary-custom, .btn-outline-custom) {
 
 /* Home 1, Home 2, and Auth responsive pass */
 body.home-page,
-body.home2-page,
+body.home2-page {
+  overflow-x: visible;
+  width: 100%;
+}
+
 body.auth-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -3507,7 +3530,7 @@ body.auth-page section > .container > .row.g-4 {
   margin-right: 0;
 }
 
-body.home-page :is(#services .row, .why-us-value-grid) {
+body.home-page #services .row {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
@@ -3967,6 +3990,22 @@ body.home-page .author-avatar {
     padding-right: 24px;
   }
 
+  body.home2-page #lookbook .row,
+  body.home2-page #reviews2 .row {
+    grid-template-columns: repeat(3, minmax(0, 290px));
+    gap: 1.35rem;
+  }
+
+  body.home2-page #lookbook .pattern-card-body h5.pattern-name {
+    min-height: 28px;
+  }
+  body.home2-page #lookbook .pattern-card-body p.pattern-type {
+    min-height: 38px;
+  }
+  body.home2-page #lookbook .pattern-card-body p:last-child {
+    min-height: 60px;
+  }
+
   body.home-page .hero-section {
     padding-top: 76px;
   }
@@ -3989,11 +4028,6 @@ body.home-page .author-avatar {
 }
 
 @media (max-width: 991.98px) {
-  body.home-page #mainNav {
-    position: sticky;
-    top: 0;
-  }
-
   body.home-page #mainNav .container,
   body.home-page .hero-container,
   body.home-page .section-pad > .container,
@@ -4434,11 +4468,6 @@ body.home2-page .consultation-bg-cta .btn-primary-custom {
 }
 
 @media (max-width: 991.98px) {
-  body.home2-page #mainNav {
-    position: sticky;
-    top: 0;
-  }
-
   body.home2-page #mainNav .container,
   body.home2-page .section-pad > .container,
   body.home2-page .site-footer > .container {
@@ -4919,7 +4948,7 @@ body.auth-page.auth-simple-page .auth-register-card {
     border-radius: 0;
     box-shadow: -18px 0 45px rgba(44, 36, 32, 0.16);
     max-height: none;
-    overflow-x: hidden;
+    overflow-x: clip;
     overflow-y: auto;
     scrollbar-width: none;
     transform: translateX(100%);
@@ -4996,7 +5025,14 @@ body.auth-page.auth-simple-page .auth-register-card {
     border-top: 0 !important;
   }
 
-  .nav-link,
+  .nav-link {
+    border: 0 !important;
+    padding: 10px 14px !important;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+  }
+
   .dropdown-item {
     border: 0 !important;
   }
@@ -5022,10 +5058,13 @@ body.auth-page.auth-simple-page .auth-register-card {
   }
 
   .dropdown-item {
-    padding: 7px 0 7px 14px !important;
+    padding: 10px 14px 10px 28px !important;
     color: var(--clr-mocha) !important;
     background: transparent !important;
     font-size: 0.88rem;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
   }
 
   html[dir="ltr"] .navbar-collapse {
@@ -5057,7 +5096,14 @@ body.auth-page.auth-simple-page .auth-register-card {
   }
 
   html[dir="rtl"] .dropdown-item {
-    padding: 7px 14px 7px 0 !important;
+    padding: 10px 28px 10px 14px !important;
+  }
+
+  #mainNav .nav-link:hover,
+  #mainNav .dropdown-item:hover {
+    background: rgba(201, 130, 110, 0.06) !important;
+    border-radius: var(--radius-sm) !important;
+    color: var(--clr-rose) !important;
   }
 }
 
@@ -5612,7 +5658,7 @@ body.auth-page.auth-simple-page .auth-register-card {
 
 /* Final responsive footer alignment */
 .site-footer {
-  overflow-x: hidden;
+  overflow-x: clip;
   padding-top: 68px;
 }
 
@@ -5844,7 +5890,7 @@ body.auth-page.auth-simple-page .auth-register-card {
 
 /* Pattern page responsive polish */
 body.patterns-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -5894,9 +5940,9 @@ body.patterns-page #fabric-guide + .section-pad .row.g-4 {
   gap: 1.25rem;
 }
 
-body.patterns-page :is(#patternGrid, .fabric-guide-grid) > [class*="col-"],
-body.patterns-page #fabric-guide + .section-pad .row.g-4 > [class*="col-"],
-body.patterns-page #fabric-guide + .section-pad + .section-pad .row.g-4 > [class*="col-"] {
+body.patterns-page :is(#patternGrid, .fabric-guide-grid) > [class*="col-"]:not(.hidden),
+body.patterns-page #fabric-guide + .section-pad .row.g-4 > [class*="col-"]:not(.hidden),
+body.patterns-page #fabric-guide + .section-pad + .section-pad .row.g-4 > [class*="col-"]:not(.hidden) {
   display: flex;
   max-width: none;
   padding-left: 0;
@@ -5916,6 +5962,12 @@ body.patterns-page .pattern-card {
 body.patterns-page .pattern-card-body {
   display: grid;
   grid-template-rows: auto auto 1fr;
+}
+body.patterns-page .pattern-card-body .pattern-name {
+  min-height: 28px;
+}
+body.patterns-page .pattern-card-body .pattern-type {
+  min-height: 40px;
 }
 
 body.patterns-page .pattern-meta {
@@ -6021,11 +6073,21 @@ body.patterns-page .cta-banner > .row {
     margin-right: auto;
   }
 
-  body.patterns-page #pattern-grid,
   body.patterns-page #fabric-guide,
   body.patterns-page #fabric-guide + .section-pad,
   body.patterns-page #fabric-guide + .section-pad + .section-pad {
     text-align: center;
+  }
+  /* Keep section header centered but cards left-aligned */
+  body.patterns-page #pattern-grid .section-header {
+    text-align: center;
+  }
+  body.patterns-page #pattern-grid .pattern-card,
+  body.patterns-page #pattern-grid .pattern-card-body,
+  body.patterns-page #pattern-grid .pattern-name,
+  body.patterns-page #pattern-grid .pattern-type,
+  body.patterns-page #pattern-grid .pattern-meta {
+    text-align: left !important;
   }
 
   body.patterns-page .spotlight-details {
@@ -6055,10 +6117,14 @@ body.patterns-page .cta-banner > .row {
     padding-right: 22px;
   }
 
-  body.patterns-page #patternGrid,
+  body.patterns-page #patternGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    width: 100%;
+  }
   body.patterns-page .fabric-guide-grid,
   body.patterns-page #fabric-guide + .section-pad + .section-pad .row.g-4 {
-    grid-template-columns: repeat(2, minmax(0, min(330px, calc(50% - 12px))));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.35rem;
   }
 
@@ -6066,11 +6132,21 @@ body.patterns-page .cta-banner > .row {
     grid-template-columns: repeat(3, minmax(0, 200px));
   }
 
-  body.patterns-page :is(#patternGrid, .fabric-guide-grid) > [class*="col-"]:last-child:nth-child(odd),
+  body.patterns-page .fabric-guide-grid > [class*="col-"]:last-child:nth-child(odd),
   body.patterns-page #fabric-guide + .section-pad + .section-pad .row.g-4 > [class*="col-"]:last-child:nth-child(odd) {
     grid-column: 1 / -1;
     justify-self: center;
-    width: min(100%, 330px);
+    width: min(100%, 1fr);
+  }
+  /* Force left text alignment for all pattern cards on tablet */
+  body.patterns-page #patternGrid .pattern-card-body,
+  body.patterns-page #patternGrid .pattern-name,
+  body.patterns-page #patternGrid .pattern-type {
+    text-align: left !important;
+  }
+  body.patterns-page #patternGrid .pattern-meta {
+    flex-direction: row !important;
+    align-items: center !important;
   }
 
   body.patterns-page .spotlight-img-main {
@@ -6127,7 +6203,11 @@ body.patterns-page .cta-banner > .row {
     padding-right: 14px;
   }
 
-  body.patterns-page #patternGrid,
+  body.patterns-page #patternGrid {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    gap: 1rem;
+  }
   body.patterns-page .fabric-guide-grid,
   body.patterns-page #fabric-guide + .section-pad .row.g-4,
   body.patterns-page #fabric-guide + .section-pad + .section-pad .row.g-4 {
@@ -6138,20 +6218,38 @@ body.patterns-page .cta-banner > .row {
     gap: 1.25rem;
   }
 
-  body.patterns-page :is(.pattern-card, .info-card, .swatch-card, .timeline-card) {
+  body.patterns-page :is(.info-card, .swatch-card, .timeline-card) {
     max-width: 328px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Full-width pattern cards on mobile with left-aligned text */
+  body.patterns-page #patternGrid > [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+  }
+  body.patterns-page #patternGrid .pattern-card {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+  body.patterns-page #patternGrid .pattern-card-body,
+  body.patterns-page #patternGrid .pattern-name,
+  body.patterns-page #patternGrid .pattern-type {
+    text-align: left !important;
+  }
+  body.patterns-page #patternGrid .pattern-meta {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
   }
 
   body.patterns-page .pattern-img-wrap {
     height: 220px;
   }
 
-  body.patterns-page .pattern-meta {
-    align-items: flex-start !important;
-    flex-direction: column;
-  }
+  /* pattern-meta layout handled by #patternGrid .pattern-meta rule */
 
   body.patterns-page .spotlight-img-main {
     aspect-ratio: 1 / 1;
@@ -6187,7 +6285,7 @@ body.patterns-page .cta-banner > .row {
 
 /* Embroidery page responsive polish */
 body.embroidery-page {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -6526,7 +6624,7 @@ body.embroidery-page .cta-banner > .row {
 /* Try at Home page final responsive layout */
 body.try-page {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.try-page *,
@@ -6762,6 +6860,32 @@ body.try-page .cta-perks {
   body.try-page #faq + .section-pad .row.g-4 {
     grid-template-columns: repeat(3, minmax(0, 290px));
   }
+
+  body.try-page #how-it-works + .section-pad [style*="grid-template-columns:1fr 1fr"] {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body.try-page #how-it-works + .section-pad .row.g-3 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, min(360px, calc(50% - 12px))));
+    align-items: stretch;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 1.5rem;
+  }
+
+  body.try-page #how-it-works + .section-pad {
+    text-align: center;
+  }
+
+  body.try-page #how-it-works + .section-pad .section-body-text {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -6929,10 +7053,16 @@ body.try-page .cta-perks {
     gap: 1.25rem;
   }
 
-  body.try-page :is(.timeline-card, .pattern-card, .testimonial-card, .luxe-card-bg) {
+  body.try-page :is(.timeline-card, .pattern-card, .testimonial-card) {
     max-width: 328px;
     margin-left: auto;
     margin-right: auto;
+  }
+  /* Feature cards in 2x2 grid must NOT be constrained to 328px */
+  body.try-page #try-box-features .try-box-feature-card {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   body.try-page #how-it-works + .section-pad [style*="grid-template-columns:1fr 1fr"] {
@@ -7010,7 +7140,7 @@ body.try-page .cta-perks {
 /* Gallery page final responsive layout */
 body.gallery-page {
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body.gallery-page *,
@@ -7545,7 +7675,7 @@ body.auth-page.auth-simple-page .auth-center-shell {
   min-height: 100vh;
 }
 
-body.auth-page.auth-simple-page .auth-center-shell > .auth-brand {
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand {
   display: inline-flex !important;
   justify-content: center !important;
   margin: 0 auto !important;
@@ -7553,14 +7683,14 @@ body.auth-page.auth-simple-page .auth-center-shell > .auth-brand {
   width: fit-content;
 }
 
-body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-icon {
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-icon {
   flex: 0 0 42px;
   font-size: 1.45rem;
   height: 42px;
   width: 42px;
 }
 
-body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-text {
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-text {
   font-size: 1.42rem;
   max-width: 250px;
 }
@@ -7583,18 +7713,18 @@ body.auth-page.auth-simple-page .auth-register-card {
     padding: 24px 14px;
   }
 
-  body.auth-page.auth-simple-page .auth-center-shell > .auth-brand {
+  body.auth-page.auth-simple-page .auth-center-shell .auth-brand {
     max-width: min(100%, 300px) !important;
   }
 
-  body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-icon {
+  body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-icon {
     flex-basis: 38px !important;
     font-size: 1.28rem !important;
     height: 38px !important;
     width: 38px !important;
   }
 
-  body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-text {
+  body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-text {
     font-size: 1.18rem !important;
     max-width: 220px !important;
   }
@@ -7977,7 +8107,7 @@ body.auth-page.auth-simple-page .auth-register-card {
 body.home-page .site-footer,
 body.home2-page .site-footer {
   max-width: 100% !important;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   padding-top: clamp(42px, 6vw, 68px) !important;
 }
 
@@ -8356,13 +8486,16 @@ body.try-page .try-box-summary-text {
 
 }
 
-/* Clean header while scrolling: remove navbar lines, shadows, and progress bars */
-#mainNav,
-#mainNav.scrolled,
-body.dark-theme #mainNav,
-body.dark-theme #mainNav.scrolled {
-  border-bottom: 0 !important;
-  box-shadow: none !important;
+/* Fixed navbar: keep a subtle bottom border for separation from page content */
+#mainNav {
+  border-bottom: 1px solid rgba(200, 169, 110, 0.15) !important;
+}
+#mainNav.scrolled {
+  box-shadow: 0 2px 20px rgba(100, 60, 40, 0.1) !important;
+  border-bottom-color: transparent !important;
+}
+body.dark-theme #mainNav {
+  border-bottom-color: rgba(200, 169, 110, 0.1) !important;
 }
 
 #mainNav::before,
@@ -8379,6 +8512,97 @@ body.dark-theme #mainNav.scrolled {
 /* Try-at-home collage: remove the Includes overlay card */
 body.try-page .try-box-summary {
   display: none !important;
+}
+
+/* =============================================
+   TRY AT HOME � BOX FEATURE CARDS (2x2 grid)
+   Centered icon, equal height, uniform text
+   ============================================= */
+body.try-page #try-box-features .col-6 {
+  display: flex;
+}
+
+body.try-page .try-box-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 24px 16px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  flex: 1;
+  gap: 0;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+body.try-page .try-box-feature-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+body.try-page .try-box-feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+body.try-page .try-box-icon-rose {
+  background: rgba(201, 130, 110, 0.12);
+  color: var(--clr-rose);
+}
+
+body.try-page .try-box-icon-gold {
+  background: rgba(200, 169, 110, 0.12);
+  color: var(--clr-gold);
+}
+
+body.try-page .try-box-feature-title {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-charcoal);
+  margin-bottom: 6px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+body.try-page .try-box-feature-desc {
+  font-size: 0.8rem;
+  color: var(--clr-mocha);
+  line-height: 1.5;
+}
+
+body.dark-theme .try-box-feature-card {
+  background: rgba(255,255,255,0.04);
+}
+
+@media (max-width: 575.98px) {
+  body.try-page #try-box-features .g-3 {
+    --bs-gutter-x: 0.65rem;
+    --bs-gutter-y: 0.65rem;
+  }
+  body.try-page .try-box-feature-card {
+    padding: 18px 10px 16px;
+  }
+  body.try-page .try-box-feature-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  body.try-page .try-box-feature-title {
+    font-size: 0.82rem;
+  }
+  body.try-page .try-box-feature-desc {
+    font-size: 0.76rem;
+  }
 }
 
 /* Active menu highlight */
@@ -8436,7 +8660,7 @@ body.dark-theme #mainNav .dropdown-item.active-nav {
 #mainNav .navbar-brand .brand-icon,
 .auth-simple-page .auth-brand .brand-icon,
 .site-footer .footer-brand .brand-icon,
-body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-icon,
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-icon,
 body.home-page .navbar-brand .brand-icon,
 body.home2-page .navbar-brand .brand-icon {
   display: inline-flex !important;
@@ -8453,7 +8677,202 @@ body.home2-page .navbar-brand .brand-icon {
 #mainNav .navbar-brand .brand-text,
 .auth-simple-page .auth-brand .brand-text,
 .site-footer .footer-brand .brand-text,
-body.auth-page.auth-simple-page .auth-center-shell > .auth-brand .brand-text,
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-text,
+body.home-page .navbar-brand .brand-text,
+body.home2-page .navbar-brand .brand-text {
+  display: inline-block !important;
+  font-size: 1.45rem !important;
+  line-height: 1 !important;
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.brand-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+/* ---- Dark Mode Overrides for Page Heroes (Banners) ---- */
+body.dark-theme .page-hero {
+  background-color: #120c0a !important;
+}
+body.dark-theme .about-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/about_hero.jpg') !important;
+}
+body.dark-theme .contact-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/contact_hero.png') !important;
+}
+body.dark-theme .embroidery-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/embroidery_hero.png') !important;
+}
+body.dark-theme .gallery-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/gallery_hero.png') !important;
+}
+body.dark-theme .patterns-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/lace_library_hero.jpg') !important;
+}
+body.dark-theme .try-at-home-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/try_at_home_hero.png') !important;
+}
+body.dark-theme .veil-guide-hero {
+  background-image: linear-gradient(rgba(18, 12, 10, 0.85), rgba(18, 12, 10, 0.85)), url('../images/raw_cut_edge.jpg') !important;
+}
+
+body.dark-theme .page-hero .breadcrumb-nav {
+  color: #e3cfbe !important; /* light mocha */
+}
+body.dark-theme .page-hero .breadcrumb-nav a {
+  color: #e8d5a8 !important; /* light gold */
+}
+body.dark-theme .page-hero h1 {
+  color: #fffdf9 !important; /* off-white */
+}
+body.dark-theme .page-hero h1 em {
+  color: #e8d5a8 !important; /* light gold */
+}
+body.dark-theme .page-hero-subtitle {
+  color: #e3cfbe !important; /* light mocha */
+}
+body.dark-theme .page-hero .section-tag {
+  color: var(--clr-gold-light) !important;
+}
+
+/* ---- Hero Action Buttons in Dark Theme ---- */
+body.dark-theme :is(.hero-actions, .page-hero-actions) .btn-outline-custom {
+  color: #fffdf9 !important; /* off-white text for contrast */
+  border-color: var(--clr-gold-light) !important; /* lighter gold border */
+}
+body.dark-theme :is(.hero-actions, .page-hero-actions) .btn-outline-custom:hover {
+  background: var(--clr-gold-light) !important;
+  color: #120c0a !important; /* dark text on hover */
+}
+
+/* ---- Home 1 Hero Dark Theme Background Overlay Overrides ---- */
+body.home-page.dark-theme .hero-section {
+  background-image:
+    linear-gradient(90deg, rgba(18, 12, 10, 0.96) 0%, rgba(18, 12, 10, 0.84) 44%, rgba(18, 12, 10, 0.42) 100%),
+    url('../images/hero_index.png') !important;
+}
+
+@media (max-width: 991.98px) {
+  body.home-page.dark-theme .hero-section {
+    background-image:
+      linear-gradient(180deg, rgba(18, 12, 10, 0.96) 0%, rgba(18, 12, 10, 0.9) 58%, rgba(18, 12, 10, 0.72) 100%),
+      url('../images/hero_index.png') !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.home-page.dark-theme .hero-section {
+    background-image:
+      linear-gradient(180deg, rgba(18, 12, 10, 0.98) 0%, rgba(18, 12, 10, 0.94) 62%, rgba(18, 12, 10, 0.82) 100%),
+      url('../images/hero_index.png') !important;
+}
+.pricing-card:not(.featured-price) .price-feature i {
+  color: var(--clr-rose-dark) !important; /* Compliant contrast check icon */
+}
+
+/* Ensure proper dark theme contrast overrides for normal cards */
+body.dark-theme .pricing-card:not(.featured-price) .price-tag {
+  color: var(--clr-rose) !important; /* Retain original soft rose in dark theme */
+}
+body.dark-theme .pricing-card:not(.featured-price) .price-amount {
+  color: var(--clr-rose) !important; /* Retain original soft rose in dark theme */
+}
+body.dark-theme .pricing-card:not(.featured-price) .price-period {
+  color: var(--clr-mocha) !important; /* Resolves to e3cfbe in dark theme */
+}
+body.dark-theme .pricing-card:not(.featured-price) .price-feature i {
+  color: var(--clr-rose) !important; /* Retain original soft rose in dark theme */
+}
+
+/* Improve contrast for featured card (dark background) text/elements in all themes */
+.pricing-card.featured-price .price-tag {
+  color: var(--clr-gold-light) !important; /* Lighter gold for high contrast on dark brown background */
+}
+.pricing-card.featured-price .price-period {
+  color: rgba(255, 255, 255, 0.85) !important; /* Light text for readability on dark brown background */
+}
+.pricing-card.featured-price .price-feature i {
+  color: var(--clr-gold-light) !important; /* Lighter check icon for high contrast on dark brown background */
+}
+
+/* Social Login Styles */
+.social-auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 24px 0;
+  color: var(--clr-mocha);
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
+.social-auth-divider::before,
+.social-auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1.5px solid rgba(107, 78, 61, 0.15);
+}
+
+.social-auth-divider:not(:empty)::before {
+  margin-right: 12px;
+}
+
+.social-auth-divider:not(:empty)::after {
+  margin-left: 12px;
+}
+
+.social-auth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn-social-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: 1.5px solid rgba(107, 78, 61, 0.22);
+  border-radius: var(--radius-sm);
+  color: var(--clr-charcoal);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn-social-auth:hover {
+  background: rgba(107, 78, 61, 0.05);
+  border-color: var(--clr-rose);
+  transform: translateY(-1px);
+}
+
+body.dark-theme .btn-social-auth {
+  color: #fffdf9;
+  border-color: rgba(232, 213, 168, 0.22);
+}
+
+body.dark-theme .btn-social-auth:hover {
+  background: rgba(232, 213, 168, 0.08);
+  border-color: var(--clr-gold);
+.brand-text,
+#mainNav .navbar-brand .brand-text,
+.auth-simple-page .auth-brand .brand-text,
+.site-footer .footer-brand .brand-text,
+body.auth-page.auth-simple-page .auth-center-shell .auth-brand .brand-text,
 body.home-page .navbar-brand .brand-text,
 body.home2-page .navbar-brand .brand-text {
   display: inline-block !important;
@@ -8552,17 +8971,6 @@ body.home-page.dark-theme .hero-section {
   }
 }
 
-/* ---- Pricing Cards Contrast & Accessibility Enhancements (WCAG Compliance) ---- */
-/* Increase contrast for normal card text/elements in light mode */
-.pricing-card:not(.featured-price) .price-tag {
-  color: var(--clr-rose-dark) !important; /* Compliant contrast on white background */
-}
-.pricing-card:not(.featured-price) .price-amount {
-  color: var(--clr-rose-dark) !important; /* Darker rose for accessible price contrast */
-}
-.pricing-card:not(.featured-price) .price-period {
-  color: var(--clr-charcoal) !important; /* Darker, high-contrast text for starting price */
-}
 .pricing-card:not(.featured-price) .price-feature i {
   color: var(--clr-rose-dark) !important; /* Compliant contrast check icon */
 }
@@ -8663,6 +9071,163 @@ body.dark-theme .btn-social-auth:hover {
   font-size: 1.15rem;
 }
 
+/* Centering logo inside the auth form card */
+body.auth-page.auth-simple-page .auth-center-shell .auth-form-card .auth-brand {
+  display: flex !important;
+  margin: 0 auto 24px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: fit-content !important;
+  max-width: 100% !important;
+}
+
+/* Prevent horizontal overflow on sections/footers globally without breaking sticky nav */
+main, section, .marquee-strip, .site-footer {
+  max-width: 100% !important;
+  overflow-x: clip !important;
+}
+
+/* Embroidery page: fix v-timeline-item colors/background in dark theme */
+:is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item,
+:is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+:is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item h5,
+:is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item h5 {
+  color: #221a08 !important;
+}
+
+:is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item p,
+:is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item p {
+  color: #654224 !important;
+}
+
+@media (max-width: 991.98px) {
+  :is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item,
+  :is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item {
+    background: #1d1410 !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+    border: 1px solid rgba(200, 169, 110, 0.15) !important;
+  }
+}
 
 
 
+/* =============================================
+   PATTERNS PAGE – FINAL RESPONSIVE OVERRIDES
+   Applied after all media queries to ensure
+   correct alignment on all screen sizes.
+   ============================================= */
+
+/* Remove Bootstrap gutter padding from pattern grid columns */
+body.patterns-page #patternGrid > [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* CRITICAL: Hidden pattern items must collapse — override any display rules */
+body.patterns-page #patternGrid > .pattern-item.hidden {
+  display: none !important;
+}
+
+/* Cards always fill column width and stack as flex column */
+body.patterns-page #patternGrid .pattern-card {
+  width: 100% !important;
+  height: 100% !important;
+  text-align: left !important;
+}
+
+/* Uniform body padding */
+body.patterns-page #patternGrid .pattern-card-body {
+  padding: 18px 20px 20px !important;
+  text-align: left !important;
+}
+
+/* All text elements in pattern cards left-aligned */
+body.patterns-page #patternGrid .pattern-name,
+body.patterns-page #patternGrid .pattern-type,
+body.patterns-page #patternGrid .pattern-price {
+  text-align: left !important;
+}
+
+/* Meta row stays horizontal on tablet and above */
+@media (min-width: 576px) {
+  body.patterns-page #patternGrid .pattern-meta {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+}
+
+/* ==========================================================================
+   UNIFIED PAGE HERO BANNERS & CONTAINER WIDTHS FOR ALL INNER PAGES
+   ========================================================================== */
+
+/* Standardized container widths for all inner pages (About, Contact, Veil Guide, Patterns, Embroidery, Try, Gallery) */
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) :is(.section-pad > .container, .page-hero > .container, .site-footer > .container) {
+  width: min(100%, 1140px) !important;
+}
+
+/* Standardized Page Hero (Banner) Styling (Desktop viewports >= 992px) */
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero {
+  height: 420px !important;
+  min-height: 420px !important;
+  padding: 120px 0 60px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .page-hero-content {
+  text-align: left !important;
+  width: 100% !important;
+}
+
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .breadcrumb-nav,
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .page-hero-actions {
+  justify-content: flex-start !important;
+}
+
+:is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero-subtitle {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  max-width: 680px !important;
+}
+
+/* Standardized Page Hero (Banner) Styling (Tablet viewports max-width: 991.98px) */
+@media (max-width: 991.98px) {
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero {
+    height: auto !important;
+    min-height: 360px !important;
+    padding: 110px 0 56px !important;
+  }
+
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .page-hero-content {
+    text-align: center !important;
+  }
+
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .breadcrumb-nav,
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero .page-hero-actions {
+    justify-content: center !important;
+  }
+
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero-subtitle {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 540px !important;
+  }
+}
+
+/* Standardized Page Hero (Banner) Styling (Mobile viewports max-width: 575.98px) */
+@media (max-width: 575.98px) {
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 96px 0 46px !important;
+  }
+
+  :is(.about-page, .contact-page, .veil-guide-page, .patterns-page, .embroidery-page, .try-page, .gallery-page) .page-hero-subtitle {
+    max-width: 320px !important;
+  }
+}

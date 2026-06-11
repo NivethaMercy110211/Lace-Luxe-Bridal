@@ -61,19 +61,59 @@ document.querySelectorAll('.faq-question').forEach(btn => {
 (function initPatternFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
   const patternItems = document.querySelectorAll('.pattern-item[data-category]');
-  if (!filterBtns.length) return;
+  const searchInput = document.getElementById('patternSearchInput');
+  if (!filterBtns.length && !searchInput) return;
+
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  function updateFilters() {
+    patternItems.forEach(item => {
+      const category = item.dataset.category || '';
+      const nameEl = item.querySelector('.pattern-name');
+      const typeEl = item.querySelector('.pattern-type');
+      const nameText = nameEl ? nameEl.textContent.toLowerCase() : '';
+      const typeText = typeEl ? typeEl.textContent.toLowerCase() : '';
+
+      const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+      const matchesSearch = (searchQuery === '' || nameText.includes(searchQuery) || typeText.includes(searchQuery));
+
+      const show = matchesCategory && matchesSearch;
+      item.classList.toggle('hidden', !show);
+
+      if (show) {
+        item.style.animation = 'none';
+        item.offsetHeight; // force reflow
+        item.style.animation = 'fadeInItem 0.4s ease both';
+      } else {
+        item.style.animation = '';
+      }
+    });
+
+    if (window.AOS) {
+      if (typeof window.AOS.refreshHard === 'function') {
+        window.AOS.refreshHard();
+      } else if (typeof window.AOS.refresh === 'function') {
+        window.AOS.refresh();
+      }
+    }
+  }
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      patternItems.forEach(item => {
-        const show = filter === 'all' || item.dataset.category === filter;
-        item.classList.toggle('hidden', !show);
-        if (show) item.style.animation = 'fadeInItem 0.4s ease both';
-      });
+      activeCategory = btn.dataset.filter;
+      updateFilters();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      updateFilters();
+    });
+  }
 })();
 
 // ─── Gallery Filter ───────────────────────────────────────────────────────────

@@ -5,6 +5,29 @@
 
 'use strict';
 
+// Restore theme & direction immediately on script load to prevent visual flashes
+(function restoreThemeAndDirection() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark-theme');
+    if (document.body) {
+      document.body.classList.add('dark-theme');
+    } else {
+      const observer = new MutationObserver((mutations, obs) => {
+        if (document.body) {
+          document.body.classList.add('dark-theme');
+          obs.disconnect();
+        }
+      });
+      observer.observe(document.documentElement, { childList: true });
+    }
+  }
+  const savedDir = localStorage.getItem('dir');
+  if (savedDir) {
+    document.documentElement.setAttribute('dir', savedDir);
+  }
+})();
+
 // ─── Password Toggle ──────────────────────────────────────────────────────────
 function initPasswordToggle(btnId, inputId, iconId) {
   const btn = document.getElementById(btnId);
