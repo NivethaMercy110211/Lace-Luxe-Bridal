@@ -9119,7 +9119,22 @@ main, section, .marquee-strip, .site-footer {
   }
 }
 
-
+/* General Dark Theme Fixes for Timelines and Cards */
+body.dark-theme .v-timeline-item h5 {
+  color: var(--clr-charcoal) !important;
+}
+body.dark-theme .v-timeline-item p {
+  color: var(--clr-mocha) !important;
+}
+body.dark-theme .v-timeline::before {
+  background: rgba(200, 169, 110, 0.25) !important;
+}
+body.dark-theme .info-card h5 {
+  color: var(--clr-charcoal) !important;
+}
+body.dark-theme .icon-grid-card h6 {
+  color: var(--clr-charcoal) !important;
+}
 
 /* =============================================
    PATTERNS PAGE – FINAL RESPONSIVE OVERRIDES
