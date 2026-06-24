@@ -9102,12 +9102,12 @@ main, section, .marquee-strip, .site-footer {
 
 :is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item h5,
 :is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item h5 {
-  color: #221a08 !important;
+  color: var(--clr-charcoal) !important;
 }
 
 :is(body.dark-theme, .dark-theme).embroidery-page .v-timeline-item p,
 :is(body.dark-theme, .dark-theme) .embroidery-page .v-timeline-item p {
-  color: #654224 !important;
+  color: var(--clr-mocha) !important;
 }
 
 @media (max-width: 991.98px) {
