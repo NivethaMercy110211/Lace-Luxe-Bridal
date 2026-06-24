@@ -1,20 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
   <defs>
-    <!-- Default (Light Scheme): Rich gold/bronze for high contrast on light backgrounds -->
+    <!-- Rich warm gold/bronze gradient for high contrast on light backgrounds -->
     <linearGradient id="luxuryGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop class="stop-start" offset="0%" stop-color="#c8a96e" />
-      <stop class="stop-middle" offset="50%" stop-color="#9e7a44" />
-      <stop class="stop-end" offset="100%" stop-color="#785929" />
+      <stop offset="0%" stop-color="#c8a96e" />
+      <stop offset="50%" stop-color="#9e7a44" />
+      <stop offset="100%" stop-color="#785929" />
     </linearGradient>
-
-    <!-- Embedded styles with dark mode media query to adapt browser icon automatically -->
-    <style>
-      @media (prefers-color-scheme: dark) {
-        .stop-start { stop-color: #fff1d0 !important; }
-        .stop-middle { stop-color: #e8d5a8 !important; }
-        .stop-end { stop-color: #c8a96e !important; }
-      }
-    </style>
   </defs>
 
   <!-- Outer delicate circle representing lace thread edge -->

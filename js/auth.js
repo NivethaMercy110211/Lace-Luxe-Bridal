@@ -267,3 +267,41 @@ document.querySelectorAll('.social-auth-btn').forEach(btn => {
     label.textContent = c.label; label.style.color = c.color;
   });
 })();
+
+// ─── Theme Toggle ─────────────────────────────────────────────────────────────
+(function initThemeSwitcher() {
+  const btn = document.getElementById('themeToggleBtn');
+  if (!btn) return;
+  const icon = btn.querySelector('i');
+  
+  const updateIcon = (theme) => {
+    if (icon) {
+      icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon-stars';
+    }
+  };
+
+  // Restore state on load
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  updateIcon(savedTheme);
+
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-theme');
+    document.documentElement.classList.toggle('dark-theme', isDark);
+    const theme = isDark ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    updateIcon(theme);
+  });
+})();
+
+// ─── LTR/RTL Layout Toggler ──────────────────────────────────────────────────
+(function initDirectionSwitcher() {
+  const btn = document.getElementById('dirToggleBtn');
+  if (!btn) return;
+  
+  btn.addEventListener('click', () => {
+    const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+    const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+    document.documentElement.setAttribute('dir', newDir);
+    localStorage.setItem('dir', newDir);
+  });
+})();

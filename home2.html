@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lace Luxe Bridal – Alternative Premium Homepage. Explore our lookbook, premium lace library, try-at-home kit, and book atelier consultations." />
-  <title>Lace Luxe Bridal | Home 2 (Atelier Edition)</title>
+  <meta name="description" content="Lace Luxe Bridal – Alternative Premium Homepage. Explore our lookbook, premium lace library, try-at-home kit, and book private studio consultations." />
+  <title>Lace Luxe Bridal | Home 2 (Couture Edition)</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=2" />
   <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
   <link rel="shortcut icon" href="images/favicon.svg?v=2" type="image/x-icon" />
@@ -31,13 +31,21 @@
       padding: 40px 48px;
     }
     .hero-text-wrap {
-      max-width: 520px;
+      max-width: 550px;
       width: 100%;
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: 40px;
+    }
+    html[dir="rtl"] .hero-text-wrap {
+      margin-left: 40px;
       margin-right: auto;
     }
     @media (max-width: 991.98px) {
       .hero-text-wrap {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      html[dir="rtl"] .hero-text-wrap {
         margin-left: auto;
         margin-right: auto;
       }
@@ -55,6 +63,9 @@
       inset: 0;
       background: linear-gradient(to right, var(--clr-cream) 0%, transparent 20%);
     }
+    html[dir="rtl"] .hero-img-side::before {
+      background: linear-gradient(to left, var(--clr-cream) 0%, transparent 20%);
+    }
     @media (max-width: 991.98px) {
       .hero-split-section {
         flex-direction: column;
@@ -64,6 +75,9 @@
         height: 400px;
       }
       .hero-img-side::before {
+        background: linear-gradient(to bottom, var(--clr-cream) 0%, transparent 20%);
+      }
+      html[dir="rtl"] .hero-img-side::before {
         background: linear-gradient(to bottom, var(--clr-cream) 0%, transparent 20%);
       }
       .hero-text-side {
@@ -127,6 +141,11 @@
     .stat-label {
       white-space: normal !important;
       display: block !important;
+    }
+    @media (min-width: 1024.02px) {
+      html[dir="rtl"] .stat-item {
+        text-align: right !important;
+      }
     }
 
     @media (max-width: 1024px) {
@@ -245,6 +264,14 @@
       }
       .hero-text-side {
         padding: 42px 34px;
+      }
+      .hero-text-wrap {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      html[dir="rtl"] .hero-text-wrap {
+        margin-left: 0;
+        margin-right: auto;
       }
       #lace-treasures .row {
         grid-template-columns: repeat(2, minmax(0, 360px));
@@ -450,7 +477,7 @@
       <p class="hero-subtitle">Designed with passion, crafted by hand. Step into our world of modern bridal artistry and find your perfect heirloom.</p>
       <div class="hero-actions d-flex flex-wrap gap-3">
         <a href="#lookbook" class="btn-primary-custom">Explore Lookbook <i class="bi bi-arrow-right-short"></i></a>
-        <a href="contact.html" class="btn-outline-custom">Book Atelier Fitting <i class="bi bi-calendar-heart"></i></a>
+        <a href="contact.html" class="btn-outline-custom">Book Studio Fitting <i class="bi bi-calendar-heart"></i></a>
       </div>
       <div class="hero-stats d-flex flex-wrap gap-4 mt-5">
         <div class="stat-item"><span class="stat-num">120+</span><span class="stat-label">Hours Per Veil</span></div>
@@ -516,19 +543,92 @@
   </div>
 </section>
 
+<!-- SECTION: CHOOSE YOUR JOURNEY (Next Steps) -->
+<section class="journey-section section-pad bg-cream" id="journey">
+  <div class="container">
+    <div class="section-header text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Next Steps</span>
+      <h2 class="section-title">Choose Your <em>Creative</em> Journey</h2>
+      <p class="section-subtitle">We make it simple to purchase patterns, connect with our designer, or learn lace-crafting from home.</p>
+    </div>
+    
+    <div class="journey-grid">
+      <!-- Path 1: Request Swatches -->
+      <div class="journey-card-wrap" data-aos="fade-up" data-aos-delay="0">
+        <div class="journey-card">
+          <div class="journey-card-top">
+            <div class="journey-icon"><i class="bi bi-bag-heart"></i></div>
+            <h4 class="journey-title">Request Swatches</h4>
+            <p class="journey-text">Want to feel the texture and match the exact bridal shades of our lace patterns? Order physical lace swatches or request a custom Try-at-Home box.</p>
+          </div>
+          <div style="width: 100%;">
+            <a href="try-at-home.html" class="journey-btn journey-btn-primary">Order Samples <i class="bi bi-arrow-right-short"></i></a>
+            <a href="patterns.html#color-palette" class="journey-secondary-link">Compare Colors</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path 2: Purchase Yardage -->
+      <div class="journey-card-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="journey-card">
+          <div class="journey-card-top">
+            <div class="journey-icon"><i class="bi bi-scissors"></i></div>
+            <h4 class="journey-title">Purchase Yardage</h4>
+            <p class="journey-text">Ready to start creating? Purchase custom lengths and yards of any of our lace patterns. Perfect for wedding gowns, custom veils, and custom sewing.</p>
+          </div>
+          <div style="width: 100%;">
+            <a href="contact.html?subject=custom-order" class="journey-btn journey-btn-outline">Request Quote <i class="bi bi-arrow-right-short"></i></a>
+            <a href="patterns.html#custom-process" class="journey-secondary-link">View Design Process</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path 3: Bespoke Lace Design -->
+      <div class="journey-card-wrap" data-aos="fade-up" data-aos-delay="200">
+        <div class="journey-card">
+          <div class="journey-card-top">
+            <div class="journey-icon"><i class="bi bi-gem"></i></div>
+            <h4 class="journey-title">Bespoke Lace</h4>
+            <p class="journey-text">Have a completely custom creative vision? Work with our design studio from scratch to sketch, draft, and hand-produce a signature lace pattern.</p>
+          </div>
+          <div style="width: 100%;">
+            <a href="contact.html?subject=consultation" class="journey-btn journey-btn-outline">Book Consultation <i class="bi bi-arrow-right-short"></i></a>
+            <a href="contact.html" class="journey-secondary-link">Chat with Elena</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Path 4: Learn the Craft -->
+      <div class="journey-card-wrap" data-aos="fade-up" data-aos-delay="300">
+        <div class="journey-card">
+          <div class="journey-card-top">
+            <div class="journey-icon"><i class="bi bi-play-circle"></i></div>
+            <h4 class="journey-title">Learn the Craft</h4>
+            <p class="journey-text">Master the fine art of lace applique, stitching, and veil drafting. Access our HD video tutorial courses and order your practice crafting kit.</p>
+          </div>
+          <div style="width: 100%;">
+            <a href="contact.html?subject=online-class" class="journey-btn journey-btn-primary">Learn from Home <i class="bi bi-arrow-right-short"></i></a>
+            <a href="try-at-home.html" class="journey-secondary-link">Explore Video Kits</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SECTION 3: THE ATELIER CRAFT (Split Layout) -->
 <section class="section-pad bg-cream" id="atelier">
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-12 col-lg-6" data-aos="fade-right">
         <span class="section-tag">Our Workshop</span>
-        <h2 class="section-title">Step Inside the <em>Atelier</em></h2>
+        <h2 class="section-title">Step Inside the <em>Design Studio</em></h2>
         <p class="section-body-text mb-4">Every veil is individually commissioned, cut, and hand-embroidered by our master artisans. We source the finest silks, crystals, and threads directly from historic European mills.</p>
         <div class="row g-3">
           <div class="col-6">
             <div class="luxe-card-bg" style="border-radius:var(--radius-md);padding:20px;box-shadow:var(--shadow-sm);">
               <div style="font-family:var(--font-display);font-size:2rem;color:var(--clr-rose);font-weight:600;">100%</div>
-              <div style="font-size:0.75rem;font-weight:600;color:var(--clr-mocha);text-transform:uppercase;letter-spacing:0.06em;">Handcrafted in Atelier</div>
+              <div style="font-size:0.75rem;font-weight:600;color:var(--clr-mocha);text-transform:uppercase;letter-spacing:0.06em;">Handcrafted in Studio</div>
             </div>
           </div>
           <div class="col-6">

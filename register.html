@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="css/pages.css" />
 </head>
 <body class="auth-page auth-simple-page">
+  <header class="auth-header">
+    <div class="auth-top-controls">
+      <button class="nav-toggle-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme"><i class="bi bi-moon-stars"></i></button>
+      <button class="nav-toggle-btn" id="dirToggleBtn" title="Toggle Layout Direction (LTR/RTL)"><i class="bi bi-arrow-left-right"></i></button>
+    </div>
+  </header>
   <main class="auth-center-shell">
     <section class="auth-form-wrap auth-form-card auth-register-card" aria-labelledby="registerTitle">
       <div class="d-flex justify-content-center mb-4">
@@ -61,8 +67,8 @@
 
           <div class="social-auth-divider">Or register with</div>
           <div class="social-auth-buttons">
-            <button type="button" class="btn-social-auth" onclick="alert('Google registration simulation')"><i class="bi bi-google"></i> Continue with Google</button>
-            <button type="button" class="btn-social-auth" onclick="alert('Apple registration simulation')"><i class="bi bi-apple"></i> Continue with Apple</button>
+            <button type="button" class="btn-social-auth social-auth-btn btn-google-auth" onclick="alert('Google registration simulation')"><i class="bi bi-google"></i> Google</button>
+            <button type="button" class="btn-social-auth social-auth-btn btn-apple-auth" onclick="alert('Apple registration simulation')"><i class="bi bi-apple"></i> Apple</button>
           </div>
         </div>
 

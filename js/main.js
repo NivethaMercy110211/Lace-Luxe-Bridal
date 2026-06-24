@@ -464,6 +464,24 @@ function initContactForm() {
 
   if (!form) return;
 
+  // Auto-select based on subject parameter
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get('subject');
+    if (subject) {
+      const interestSelect = document.getElementById('interest');
+      if (interestSelect) {
+        if (subject === 'workshop' || subject === 'online-class') {
+          interestSelect.value = 'Workshop / Class';
+        } else if (subject === 'consultation') {
+          interestSelect.value = 'Designer Consultation';
+        }
+      }
+    }
+  } catch (e) {
+    console.error('Error auto-selecting subject:', e);
+  }
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
